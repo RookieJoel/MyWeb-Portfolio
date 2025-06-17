@@ -5,15 +5,11 @@ import { useState } from "react";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  const [contactFormOpen, setContactFormOpen] = useState(false);
-
+  
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const toggleContactForm = () => {
-    setContactFormOpen(!contactFormOpen);
-  };
 
   const navItems = [
     { name: "Home", href: "#" },
