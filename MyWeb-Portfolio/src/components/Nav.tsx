@@ -1,11 +1,18 @@
 import { motion } from "framer-motion";
 import { FiGithub, FiMail, FiLinkedin, FiMenu, FiX } from "react-icons/fi";
 import { useState } from "react";
+
+
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [contactFormOpen, setContactFormOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const toggleContactForm = () => {
+    setContactFormOpen(!contactFormOpen);
   };
 
   const navItems = [
@@ -16,7 +23,7 @@ export default function Nav() {
   ];
 
   return (
-    <nav className="transition-all duration-300 absolute w-full z-50 bg-gray-800 text-white">
+    <nav className="transition-all duration-300 fixed w-full z-50 bg-gray-800 text-white">
       <div className="flex items-center w-full p-4">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
@@ -28,7 +35,7 @@ export default function Nav() {
             delay: 0.2,
             duration: 0.5,
           }}
-          className="ml-10 text-2xl font-bold"
+          className="ml-4 md:ml-10 text-2xl font-bold"
         >
           My Portfolio
         </motion.div>
@@ -70,7 +77,7 @@ export default function Nav() {
           </ul>
         </div>
         {/* Social icons */}
-        <div className="hidden md:flex items-center space-x-4 mr-10">
+        <div className="hidden md:flex items-center space-x-4 mr-4 md:mr-10">
           <motion.a
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -117,7 +124,7 @@ export default function Nav() {
           </motion.a>
         </div>
         {/* burger menu */}
-        <div className="md:flex lg:hidden items-center">
+        <div className="flex md:hidden items-center ml-2">
           <motion.button
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -148,9 +155,9 @@ export default function Nav() {
           height: isOpen ? "auto" : 0,
         }}
         transition={{ duration: 0.5 }}
-        className="absolute top-16 right-0 bg-gray-800 text-white w-full md:w-auto md:static md:flex md:items-center md:space-x-10 overflow-hidden"
+        className="md:hidden absolute top-full left-0 bg-gray-800 text-white w-full overflow-hidden z-40"
       >
-        <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10 p-4 md:p-0">
+        <ul className="flex flex-col space-y-4 p-4">
           {navItems.map((item) => (
             <li key={item.name} className="relative group">
               <a
@@ -164,7 +171,7 @@ export default function Nav() {
           ))}
         </ul>
         <div className="py-4 border-t border-amber-300 ">
-          <div className="flex space-x-4 ml-4">
+          <div className="flex space-x-4 ml-4 justify-center">
             <motion.a
               whileHover={{ scale: 1.2 }}
               href=""
@@ -193,14 +200,18 @@ export default function Nav() {
             >
               <FiLinkedin className="text-2xl hover:text-yellow-400 transition-colors duration-300" />
             </motion.a>
-            </div>
-            <button 
+          </div>
+          <div className="mt-4 px-4"> 
+          <button
             onClick={toggleMenu}
-            className="mt-5 w-full px-4 mx-3 block bg-yellow-400 text-white font-bold py-2 rounded-lg hover:bg-yellow-600 transition-colors duration-300">
-              Contact Me
-            </button>
+            className="mt-5 w-full px-4 block bg-yellow-400 text-white font-bold py-2 rounded-lg hover:bg-yellow-600 transition-colors duration-300"
+          >
+            Contact Me
+          </button>
+          </div>
         </div>
       </motion.div>
+
     </nav>
   );
 }
