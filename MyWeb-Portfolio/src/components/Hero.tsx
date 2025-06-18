@@ -21,16 +21,14 @@ export default function Hero() {
           <div className="w-5 h-5 rounded-full bg-yellow-400" />
           <div className="w-1 h-50 xl:h-90 bg-gradient-to-b from-yellow-400 to-transparent" />
         </motion.div>
-        <div className="flex flex-col justify-center items-start mt-5 lg:max-w-[50vw] xl:max-w-[45vw]">
+        <div className="flex -pt-5 flex-col justify-center items-start mt-5 lg:max-w-[50vw] xl:max-w-[50vw]">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-2 leading-tight"
         >
-          Hi! I'm <span className="text-amber-300">
-            <TypingEffect text="Suttanop" />
-          </span>
+          Hi! I'm <span className="text-amber-300"><TypingEffect text="Suttanop Chanah" /></span>
         </motion.h1>
         <motion.h2 
         initial={{ opacity: 0, y: 20 }}
@@ -49,7 +47,7 @@ export default function Hero() {
           something amazing together!
         </motion.p>
         </div>
-
+            <Spline className='absolute xl:right-[-20%] top-[-20%]'scene="https://prod.spline.design/lRhUAH29soq7Ezaf/scene.splinecode" />
       </div>
       {/* right content */}
       <Parallax />
