@@ -2,10 +2,10 @@ import { useScroll, useTransform, motion } from "framer-motion";
 
 export default function Parallax() {
     const { scrollYProgress } = useScroll();
-    const adjustMountains3 = useTransform(scrollYProgress, [0, 0.5], ["0%", "50%"]);
-    const adjustMountains2 = useTransform(scrollYProgress, [0, 0.5], ["0%", "70%"]);
-    const adjustMountains1 = useTransform(scrollYProgress, [0, 0.5], ["0%", "90%"]);
-    const adjustPlanets = useTransform(scrollYProgress, [0, 0.5], ["0%", "-20%"]);
+    const adjustMountains3 = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+    const adjustMountains2 = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+    const adjustMountains1 = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+    const adjustPlanets = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
   return (
     <section className="absolute inset-0 bg-fixed bg-cover bg-center">
         <div className="relative h-screen overflow-hidden">
