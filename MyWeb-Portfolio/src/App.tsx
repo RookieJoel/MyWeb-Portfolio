@@ -7,6 +7,13 @@ export default function App() {
     <>
       <Nav />
       <Hero/>
+      <section className="mimn-h-screen" >Hello</section>
+      <section className="mimn-h-screen" >Hello</section>
+      <section className="mimn-h-screen" >Hello</section>
+      <section className="mimn-h-screen" >Hello</section>
+      <section className="mimn-h-screen" >Hello</section>
+      <section className="mimn-h-screen" >Hello</section>
+      <section className="mimn-h-screen" >Hello</section>
     </>
   )
 }

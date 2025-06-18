@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import Spline from "@splinetool/react-spline";
+import { TypingEffect } from "./TypeEffect";
+import Parallax from "./Parallax";
 export default function Hero() {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-center min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+    <section className="flex flex-col lg:flex-row items-center justify-center min-h-screen text-white relative overflow-hidden">
       {/* left content */}
       <div className="absolute inset-0 top-[120px] mx-auto flex flex-row items-start gap-5 ml-5">
         <motion.div 
@@ -26,7 +28,9 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-2 leading-tight"
         >
-          Hi! I'm <span className="text-amber-300">Suttanop</span>
+          Hi! I'm <span className="text-amber-300">
+            <TypingEffect text="Suttanop" />
+          </span>
         </motion.h1>
         <motion.h2 
         initial={{ opacity: 0, y: 20 }}
@@ -48,8 +52,7 @@ export default function Hero() {
 
       </div>
       {/* right content */}
-          <Spline className='absolute sm:top-[40%] md:top-[45%] lg:right-[-21%] lg:top-5'scene="https://prod.spline.design/B40gWh3cxjQ2IZq6/scene.splinecode" />
-        
+      <Parallax />
     </section>
   );
 }
