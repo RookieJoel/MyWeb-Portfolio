@@ -1,40 +1,55 @@
-import {motion} from 'framer-motion'
-import Spline from '@splinetool/react-spline';
+import { motion } from "framer-motion";
+import Spline from "@splinetool/react-spline";
 export default function Hero() {
   return (
     <section className="flex flex-col lg:flex-row items-center justify-center min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
       {/* left content */}
-      <div className="flex-1 flex flex-col items-center lg:items-start justify-center p-6 md:p-10 z-10 text-center lg:text-left">
+      <div className="absolute inset-0 top-[120px] mx-auto flex flex-row items-start gap-5 ml-5">
+        <motion.div 
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+          delay: 0.2,
+          duration: 0.5,
+        }}
+        className="flex flex-col justify-center items-center mt-5 ">
+          <div className="w-5 h-5 rounded-full bg-yellow-400" />
+          <div className="w-1 h-50 xl:h-90 bg-gradient-to-b from-yellow-400 to-transparent" />
+        </motion.div>
+        <div className="flex flex-col justify-center items-start mt-5 lg:max-w-[50vw] xl:max-w-[45vw]">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-2 leading-tight"
         >
-          Welcome to My Portfolio
+          Hi! I'm <span className="text-amber-300">Suttanop</span>
         </motion.h1>
+        <motion.h2 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4">
+          Computer Engineering Student @Chulalongkorn University
+        </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 max-w-xs sm:max-w-md lg:max-w-lg"
         >
-          Explore my projects, skills, and experiences. Let's connect and create something amazing together!
+          Explore my projects, skills, and experiences. Let's connect and create
+          something amazing together!
         </motion.p>
-      </div>
-      
-      {/* right with spline - responsive container */}
-      <div className="flex-1 relative w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[40rem] flex items-center justify-center">
-        {/* Mobile/Tablet View */}
-        <div className="lg:hidden w-full h-full max-w-sm sm:max-w-md md:max-w-lg mx-auto">
-          <Spline className="w-full h-full" scene="https://prod.spline.design/vEutDHAMNs-Zpz-D/scene.splinecode" />
         </div>
+
+      </div>
+      {/* right content */}
+          <Spline className='absolute sm:top-[40%] md:top-[45%] lg:right-[-21%] lg:top-5'scene="https://prod.spline.design/B40gWh3cxjQ2IZq6/scene.splinecode" />
         
-        {/* Desktop View - with overflow positioning */}
-        <div className="hidden lg:block absolute inset-0 xl:right-[-28%] xl:scale-110">
-          <Spline className="w-full h-full" scene="https://prod.spline.design/vEutDHAMNs-Zpz-D/scene.splinecode" />
-        </div>
-      </div>
     </section>
-  )
+  );
 }
