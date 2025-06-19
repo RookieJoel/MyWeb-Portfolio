@@ -9,6 +9,8 @@ export function GridSection() {
         area="md:col-span-6 md:row-span-2 lg:col-span-4 lg:row-span-3 xl:col-span-3 xl:row-span-2"
         title="Do things the right way"
         description="Running out of copy so I'll write anything."
+        img="/assets/sky.jpg"
+        imgClassName="w-full h-full"
       />
       <GridItem
         area="md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-2 xl:col-span-3 xl:row-span-1"
@@ -40,9 +42,11 @@ interface GridItemProps {
   area: string;
   title: string;
   description: React.ReactNode;
+  img?: string;
+  imgClassName?: string;
 }
 
-const GridItem = ({ area,title, description}: GridItemProps) => {
+const GridItem = ({ area,title, description,img , imgClassName}: GridItemProps) => {
   return (
     <li className={`min-h-[14rem] list-none ${area} xl:min-h-[14rem]`}>
       <div className="relative h-full rounded-2xl border p-2 md:rounded-3xl md:p-3">
@@ -55,6 +59,13 @@ const GridItem = ({ area,title, description}: GridItemProps) => {
           proximity={64}
           inactiveZone={0.01}
         />
+        {img && (
+          <img
+            src={img}
+            alt={title}
+            className={`absolute inset-0 h-full w-full object-cover rounded-xl ${imgClassName}`}
+          />
+        )}
         <div className="border-0.75 relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl p-6 md:p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D]">
           <div className="relative flex flex-1 flex-col justify-between gap-3">
             <div className="space-y-3">

@@ -61,7 +61,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-yellow-400 cursor-pointer"
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-yellow-400"
         >
           <FiChevronsDown className="w-10 h-10 animate-bounce" />
         </motion.div>
