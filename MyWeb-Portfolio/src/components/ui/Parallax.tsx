@@ -1,13 +1,14 @@
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, motion, useSpring } from "framer-motion";
 
 export default function Parallax() {
     const { scrollYProgress } = useScroll();
-    const adjustMountains3 = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-    const adjustMountains2 = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-    const adjustMountains1 = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
-    const adjustPlanets = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
+    const x = useSpring(scrollYProgress, {damping: 50 });
+    const adjustMountains3 = useTransform(x, [0, 1], ["0%", "70%"]);
+    const adjustMountains2 = useTransform(x, [0, 1], ["0%", "30%"]);
+    const adjustMountains1 = useTransform(x, [0, 1], ["0%", "0%"]);
+    const adjustPlanets = useTransform(x, [0, 1], ["0%", "-10%"]);
   return (
-    <section className="absolute inset-0 bg-fixed bg-cover bg-center">
+    <section className="absolute inset-0 bg-fixed bg-cover bg-center -z-100">
         <div className="relative h-screen overflow-hidden">
             <div 
                 className="absolute inset-0 w-full h-screen -z-50 bg-[url('/assets/sky.jpg')] bg-no-repeat bg-cover bg-bottom">

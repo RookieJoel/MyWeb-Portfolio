@@ -84,7 +84,7 @@ export default function Nav() {
               delay: 0.5,
             }}
             whileHover={{ scale: 1.2 }}
-            href=""
+            href="https://github.com/RookieJoel" target="_blank" rel="noopener noreferrer"
           >
             <FiGithub className="text-2xl hover:text-yellow-400 transition-colors duration-300" />
           </motion.a>
