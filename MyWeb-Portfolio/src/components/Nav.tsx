@@ -2,19 +2,18 @@ import { motion } from "framer-motion";
 import { FiGithub, FiMail, FiLinkedin, FiMenu, FiX } from "react-icons/fi";
 import { useState } from "react";
 
-
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-
   const navItems = [
     { name: "Home", href: "#" },
-    { name: "About", href: "#" },
+    { name: "Skills", href: "#" },
     { name: "Projects", href: "#" },
+    { name: "Experience", href: "#" },
     { name: "Contact", href: "#" },
   ];
 
@@ -62,7 +61,11 @@ export default function Nav() {
                       hover: {
                         scaleX: 1,
                         opacity: 1,
-                        transition: { type: "spring", stiffness: 400, damping: 30 },
+                        transition: {
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 30,
+                        },
                       },
                     }}
                     style={{ display: "block" }}
@@ -84,7 +87,9 @@ export default function Nav() {
               delay: 0.5,
             }}
             whileHover={{ scale: 1.2 }}
-            href="https://github.com/RookieJoel" target="_blank" rel="noopener noreferrer"
+            href="https://github.com/RookieJoel"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FiGithub className="text-2xl hover:text-yellow-400 transition-colors duration-300" />
           </motion.a>
@@ -168,17 +173,11 @@ export default function Nav() {
         </ul>
         <div className="py-4 border-t border-amber-300 ">
           <div className="flex space-x-4 ml-4 justify-center">
-            <motion.a
-              whileHover={{ scale: 1.2 }}
-              href=""
-            >
+            <motion.a whileHover={{ scale: 1.2 }} href="">
               <FiGithub className="text-2xl hover:text-yellow-400 transition-colors duration-300" />
             </motion.a>
 
-            <motion.a
-              whileHover={{ scale: 1.2 }}
-              href=""
-            >
+            <motion.a whileHover={{ scale: 1.2 }} href="">
               <FiMail className="text-2xl hover:text-yellow-400 transition-colors duration-300" />
             </motion.a>
 
@@ -197,17 +196,16 @@ export default function Nav() {
               <FiLinkedin className="text-2xl hover:text-yellow-400 transition-colors duration-300" />
             </motion.a>
           </div>
-          <div className="mt-4 px-4"> 
-          <button
-            onClick={toggleMenu}
-            className="mt-5 w-full px-4 block bg-yellow-400 text-white font-bold py-2 rounded-lg hover:bg-yellow-600 transition-colors duration-300"
-          >
-            Contact Me
-          </button>
+          <div className="mt-4 px-4">
+            <button
+              onClick={toggleMenu}
+              className="mt-5 w-full px-4 block bg-yellow-400 text-white font-bold py-2 rounded-lg hover:bg-yellow-600 transition-colors duration-300"
+            >
+              Contact Me
+            </button>
           </div>
         </div>
       </motion.div>
-
     </nav>
   );
 }
