@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FiGithub, FiMail, FiLinkedin, FiMenu, FiX } from "react-icons/fi";
+import { navItems } from "../data/index";
 import { useState } from "react";
 
 export default function Nav() {
@@ -9,15 +10,6 @@ export default function Nav() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
-  const navItems = [
-    { name: "Home", href: "#hero" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#proj" },
-    { name: "Experience", href: "#experiences" },
-    { name: "Contact", href: "#contact" },
-  ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
