@@ -44,15 +44,14 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
-          Changelog from my journey
-        </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
-          a timeline of my journey.
-        </p>
-      </div>
+        <div className="container mx-auto px-4 py-8" data-aos="zoom-in">
+            <h2 className="text-3xl font-bold mb-6 text-center text-white dark:text-neutral-200">
+            Timeline <span className="text-yellow-500">of My Journey</span>
+            </h2>
+            <p className="text-center mb-12 text-xl">
+            A brief overview of my journey so far.
+            </p>
+        </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
@@ -88,7 +87,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0  w-[5px] bg-gradient-to-t from-yellow-200 via-amber-600 to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0  w-[5px] bg-gradient-to-t from-yellow-200 via-amber-600   to-transparent from-[0%] via-[10%] rounded-full"
           />
           
         </div>
