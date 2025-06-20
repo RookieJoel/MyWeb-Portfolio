@@ -5,7 +5,7 @@ import Parallax from "./ui/Parallax";
 import { FiChevronsDown } from "react-icons/fi";
 export default function Hero() {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-center min-h-screen text-white relative overflow-hidden">
+    <section id="hero"className="flex flex-col lg:flex-row items-center justify-center min-h-screen text-white relative overflow-hidden">
       {/* left content */}
       <div className="absolute inset-0 top-[120px] mx-auto flex flex-row items-start gap-5 ml-5">
         <motion.div

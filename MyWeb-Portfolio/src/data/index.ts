@@ -1,64 +1,36 @@
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
-    className: "lg:col-span-2 lg:row-span-2 md:col-span-6",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/assets/sky.jpg",
-    spareImg: "",
+    area: "md:col-span-6 md:row-span-2 lg:col-span-4 lg:row-span-3 xl:col-span-3 xl:row-span-2",
+    title: "Backend Development",
+    description: "I have experience in building robust backend systems using Node.js, Express, and MongoDB. I focus on creating scalable and maintainable code."
+
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
-    description: "",
-    className: "lg:col-span-2 md:col-span-6",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "",
-    spareImg: "",
+    area: "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-2 xl:col-span-3 xl:row-span-1",
+    title: "Frontend Development",
+    description: "I specialize in creating responsive and user-friendly interfaces using React, Tailwind CSS, and Framer Motion. My goal is to enhance user experience through intuitive design."
   },
   {
     id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
-    className: "lg:col-span-1 md:col-span-6",
-    imgClassName: "",
-    titleClassName: "justify-center",
-    img: "",
-    spareImg: "",
+    area: "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-2 xl:col-span-3 xl:row-span-1",
+    title: "DevOps & Cloud",
+    description: "I have hands-on experience with AWS and Docker, enabling me to deploy applications efficiently and manage cloud resources effectively."
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
-    description: "",
-    className: "lg:col-span-1 md:col-span-6",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
+    area: "md:col-span-6 md:row-span-2 lg:col-span-4 lg:row-span-3 xl:col-span-2 xl:row-span-2",
+    title: "Do things the right way",
+    description: "Running out of copy so I'll write anything."
   },
   {
     id: 5,
-    title: "I love to create and share knowledge",
-    description: "",
-    className: "lg:col-span-1 md:col-span-6",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "/b5.svg",
-    spareImg: "",
-  },
-  {
-    id: 6,
-    title: "I am always open to new opportunities and challenges.",
-    description: "",
-    className: "lg:col-span-3 md:col-span-6",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b6.svg",
-    spareImg: "",
-  },
+    area: "md:col-span-6 md:row-span-2 lg:col-span-4 lg:row-span-3 xl:col-span-4 xl:row-span-2",
+    title: "Communication & Collaboration",
+    description:
+      "I believe in the power of effective communication and collaboration. I am always open to feedback and strive to create a positive team environment."
+  }
 ];
 
 export const projects = [

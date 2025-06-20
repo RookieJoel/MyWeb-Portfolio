@@ -1,44 +1,38 @@
 "use client";
 
 import { GlowingEffect } from "./ui/GlowingEffect";
+import { motion } from "framer-motion";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { gridItems } from "../data/index";
 
+import { useEffect } from "react";
 export function GridSection() {
   return (
+    <section id="skills" className="scroll-mt-24">
+    <div className="container mx-auto px-4 py-8 text-white" data-aos="fade-up">
+      <h2 className="text-3xl font-bold mb-6 text-center">Skills & <span className="text-yellow-500">Expertise</span></h2>
+      <p className="text-center mb-12">
+        I have a diverse skill set that includes backend development, frontend design, DevOps practices, and a strong focus on communication and collaboration.
+      </p>
+    </div>
     <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:grid-rows-4 xl:grid-cols-6 mx-15 ">
-      <GridItem
-        area="md:col-span-6 md:row-span-2 lg:col-span-4 lg:row-span-3 xl:col-span-3 xl:row-span-2"
-        title="Do things the right way"
-        description="Running out of copy so I'll write anything."
-        img="/assets/sky.jpg"
-        imgClassName="w-full h-full"
-      />
-      <GridItem
-        area="md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-2 xl:col-span-3 xl:row-span-1"
-        title="Do things the right way"
-        description="Running out of copy so I'll write anything."
-      />
-      <GridItem
-        area="md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-2 xl:col-span-3 xl:row-span-1"
-        title="Do things the right way"
-        description="Running out of copy so I'll write anything."
-      />
-      <GridItem
-        area="md:col-span-6 md:row-span-2 lg:col-span-4 lg:row-span-3 xl:col-span-2 xl:row-span-2"
-        title="Do things the right way"
-        description="Running out of copy so I'll write anything."
-      />
-      <GridItem
-        area="md:col-span-6 md:row-span-2 lg:col-span-4 lg:row-span-3 xl:col-span-4 xl:row-span-2"
-        title="Do things the right way"
-        description="Running out of copy so I'll write anything."
-      />
-
+      {gridItems.map((item, index) => (
+        <GridItem
+          key={index}
+          id={item.id}
+          area={item.area}
+          title={item.title}
+          description={item.description}
+        />
+      ))}
     </ul>
+    </section>
   );
 }
 
 interface GridItemProps {
-  className?: string;
+  id: number;
   area: string;
   title: string;
   description: React.ReactNode;
@@ -47,9 +41,18 @@ interface GridItemProps {
 }
 
 const GridItem = ({ area,title, description,img , imgClassName}: GridItemProps) => {
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <li className={`min-h-[14rem] list-none ${area} xl:min-h-[14rem]`}>
-      <div className="relative h-full rounded-2xl border p-2 md:rounded-3xl md:p-3">
+      <motion.div 
+      data-aos="fade-right"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className={`relative h-full rounded-2xl border p-2 md:rounded-3xl md:p-3`}>
         <GlowingEffect
           blur={0}
           borderWidth={3}
@@ -66,6 +69,7 @@ const GridItem = ({ area,title, description,img , imgClassName}: GridItemProps) 
             className={`absolute inset-0 h-full w-full object-cover rounded-xl ${imgClassName}`}
           />
         )}
+        
         <div className="border-0.75 relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl p-6 md:p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D]">
           <div className="relative flex flex-1 flex-col justify-between gap-3">
             <div className="space-y-3">
@@ -78,7 +82,7 @@ const GridItem = ({ area,title, description,img , imgClassName}: GridItemProps) 
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </li>
   );
 };

@@ -10,13 +10,19 @@ export default function Nav() {
   };
 
   const navItems = [
-    { name: "Home", href: "#" },
-    { name: "Skills", href: "#" },
-    { name: "Projects", href: "#" },
-    { name: "Experience", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "Home", href: "#hero" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#proj" },
+    { name: "Experience", href: "#experiences" },
+    { name: "Contact", href: "#contact" },
   ];
-
+  
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    element?.scrollIntoView({ behavior: "smooth" });
+    toggleMenu();
+  };
+  
   return (
     <nav className="transition-all duration-300 fixed w-full z-50 bg-gray-800 text-white">
       <div className="flex items-center w-full p-4">
@@ -51,6 +57,7 @@ export default function Nav() {
                   href={item.href}
                   className="relative hover:text-yellow-400 transition-colors duration-300"
                   whileHover="hover"
+                  onClick={() => scrollToSection(item.href)}
                 >
                   {item.name}
                   <motion.span
@@ -164,7 +171,7 @@ export default function Nav() {
               <a
                 href={item.href}
                 className="relative hover:text-yellow-400 transition-colors duration-300 font-medium"
-                onClick={toggleMenu}
+                onClick= {() => scrollToSection(item.href)}
               >
                 {item.name}
               </a>
