@@ -9,7 +9,7 @@ import { gridItems } from "../data/index";
 import { useEffect } from "react";
 export function GridSection() {
   return (
-    <section id="skills" className="scroll-mt-24">
+    <section id="skills" className="scroll-mt-15">
     <div className="container mx-auto px-4 py-8 text-white" data-aos="fade-up">
       <h2 className="text-3xl font-bold mb-6 text-center">Skills & <span className="text-yellow-500">Expertise</span></h2>
       <p className="text-center mb-12">
@@ -47,9 +47,9 @@ const GridItem = ({ area,title, description,img , imgClassName}: GridItemProps) 
   }, []);
 
   return (
-    <li className={`min-h-[14rem] list-none ${area} xl:min-h-[14rem]`}>
+    <li className={`min-h-[14rem] list-none ${area} xl:min-h-[10rem]`}>
       <motion.div 
-      data-aos="fade-right"
+      data-aos="zoom-in"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className={`relative h-full rounded-2xl border p-2 md:rounded-3xl md:p-3`}>
