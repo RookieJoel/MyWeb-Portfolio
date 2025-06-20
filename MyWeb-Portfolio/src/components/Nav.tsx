@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [onHover, setOnHover] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -11,18 +12,19 @@ export default function Nav() {
 
   const navItems = [
     { name: "Home", href: "#hero" },
+    { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#proj" },
     { name: "Experience", href: "#experiences" },
     { name: "Contact", href: "#contact" },
   ];
-  
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     element?.scrollIntoView({ behavior: "smooth" });
     toggleMenu();
   };
-  
+
   return (
     <nav className="transition-all duration-300 fixed w-full z-50 bg-gray-800 text-white">
       <div className="flex items-center w-full p-4">
@@ -37,8 +39,27 @@ export default function Nav() {
             duration: 0.5,
           }}
           className="ml-4 md:ml-10 text-2xl font-bold"
+          onMouseEnter={() => setOnHover(!onHover)}
+          onMouseLeave={() => setOnHover(!onHover)}
         >
           My Portfolio
+          {onHover && (
+            <motion.span
+              className="ml-2 text-yellow-400"
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{
+                type: "decay",
+                stiffness: 300,
+                damping: 20,
+                duration: 0.3,
+              }}
+            >
+              Suttanop
+            </motion.span>
+          )}
         </motion.div>
         <div className="flex-1 flex justify-center">
           <ul className="hidden lg:flex space-x-10">
@@ -171,7 +192,7 @@ export default function Nav() {
               <a
                 href={item.href}
                 className="relative hover:text-yellow-400 transition-colors duration-300 font-medium"
-                onClick= {() => scrollToSection(item.href)}
+                onClick={() => scrollToSection(item.href)}
               >
                 {item.name}
               </a>

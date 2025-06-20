@@ -2,9 +2,10 @@ export const gridItems = [
   {
     id: 1,
     area: "md:col-span-6 md:row-span-2 lg:col-span-4 lg:row-span-3 xl:col-span-3 xl:row-span-2",
-    title: "Backend Development",
-    description: "I have experience in building robust backend systems using Node.js, Express, and MongoDB. I focus on creating scalable and maintainable code."
-
+    title: "Passionate Coder",
+    description: "I have experience in building robust backend systems using Node.js, Express, and MongoDB. I focus on creating scalable and maintainable code.",
+    img: "assets/backend.png",
+    imgClassName: "w-full h-full opacity-40"
   },
   {
     id: 2,

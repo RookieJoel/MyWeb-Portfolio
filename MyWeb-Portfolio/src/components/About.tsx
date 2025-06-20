@@ -7,23 +7,21 @@ import "aos/dist/aos.css";
 import { gridItems } from "../data/index";
 
 import { useEffect } from "react";
-export function GridSection() {
+export function About() {
   return (
-    <section id="skills" className="scroll-mt-15">
+    <section id="about" className="scroll-mt-15">
     <div className="container mx-auto px-4 py-8 text-white" data-aos="fade-up">
-      <h2 className="text-3xl font-bold mb-6 text-center">Skills & <span className="text-yellow-500">Expertise</span></h2>
-      <p className="text-center mb-12">
-        I have a diverse skill set that includes backend development, frontend design, DevOps practices, and a strong focus on communication and collaboration.
+      <h2 className="text-3xl font-bold mb-6 text-center">About <span className="text-yellow-500">me</span></h2>
+      <p className="text-center mb-12 text-2xl" >
+        Who actually am I? and what do I do?
       </p>
     </div>
     <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:grid-rows-4 xl:grid-cols-6 mx-15 ">
       {gridItems.map((item, index) => (
         <GridItem
           key={index}
-          id={item.id}
-          area={item.area}
-          title={item.title}
-          description={item.description}
+          {...item}
+        
         />
       ))}
     </ul>
