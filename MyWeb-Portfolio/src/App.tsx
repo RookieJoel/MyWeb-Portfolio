@@ -1,14 +1,15 @@
 import "./index.css"
 import Nav from "./components/Nav"
 import Hero from "./components/Hero"
-import { About } from "./components/About"
+import { TimelineDemo } from "./components/Experiences"
 
 export default function App() {
   return (
     <>
       <Nav />
       <Hero/>
-      <About />
+      <TimelineDemo />
+      {/* <About /> */}
       <section className="h-screen flex items-center justify-center" />
     </>
   )
