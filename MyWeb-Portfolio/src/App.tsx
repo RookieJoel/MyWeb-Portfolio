@@ -3,6 +3,8 @@ import Nav from "./components/Nav"
 import Hero from "./components/Hero"
 import {Journey} from "./components/Journey"
 import { useEffect } from "react";
+import { Lamp} from "./components/Lamp";
+import { About } from "./components/About";
 import { Skills } from "./components/Skills";
 
 export default function App() {
@@ -21,6 +23,7 @@ export default function App() {
       <Nav />
       <Hero/>
       <Journey />
+      <Lamp />
       <Skills />
       {/* <About /> */}
     </>

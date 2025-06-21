@@ -7,6 +7,35 @@
     { name: "Contact", href: "#contact" },
 ];
 
+export const skillsBackend= [
+	{
+		id: 1,
+		name: "JavaScript",
+		icon: "assets/javascript.png",
+	},
+	{
+		id: 2,
+		name: "TypeScript",
+		icon: "assets/react.png",
+	},
+	{
+		id: 3,
+		name: "Node.js",
+		icon: "assets/nodejs.png",
+	},
+	{
+		id: 4,
+		name: "Express",
+		icon: "assets/express.png",
+	},
+	{
+		id: 5,
+		name: "MongoDB",
+		icon: "assets/mongodb.png",
+	},
+
+]
+
 export const gridItems = [
 	{
 		id: 1,
