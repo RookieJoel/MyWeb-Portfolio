@@ -132,7 +132,7 @@ type SkillItemProps = {
 export const skillsSectionItems:SkillItemProps[] = [
 	{ title: "Backend", skills: skillsBackend },
 	{ title: "Frontend", skills: skillsFrontend },
-	{ title: "Database", skills: DatabaseSkills , Maxcols: 3},
+	{ title: "Database", skills: DatabaseSkills , Maxcols: 4},
 	{ title: "DevOps", skills: skillsDevOps , Maxcols: 4}
 ];
 

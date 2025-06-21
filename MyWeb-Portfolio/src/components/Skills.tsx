@@ -20,6 +20,7 @@ export function Skills() {
           key={idx}
           title={item.title}
           skills={item.skills}
+          Maxcols={item.Maxcols}
         />
       ))}
       <BackgroundBeams />
