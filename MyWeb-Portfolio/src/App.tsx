@@ -1,8 +1,9 @@
 import "./index.css"
 import Nav from "./components/Nav"
 import Hero from "./components/Hero"
-import { Experience } from "./components/Experiences"
+import {Journey} from "./components/Journey"
 import { useEffect } from "react";
+import { Skills } from "./components/Skills";
 
 export default function App() {
   useEffect(() => {
@@ -19,9 +20,9 @@ export default function App() {
     <>
       <Nav />
       <Hero/>
-      <Experience />
+      <Journey />
+      <Skills />
       {/* <About /> */}
-      <section className="h-screen flex items-center justify-center" />
     </>
   )
 }

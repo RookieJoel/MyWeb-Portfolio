@@ -4,8 +4,8 @@ export default function Parallax() {
     const { scrollYProgress } = useScroll();
     const x = useSpring(scrollYProgress, {damping: 50 });
     const adjustMountains3 = useTransform(x, [0, 1], ["0%", "70%"]);
-    const adjustMountains2 = useTransform(x, [0, 1], ["0%", "30%"]);
-    const adjustMountains1 = useTransform(x, [0, 1], ["0%", "0%"]);
+    const adjustMountains2 = useTransform(x, [0, 1], ["0%", "40%"]);
+    const adjustMountains1 = useTransform(x, [0, 1], ["0%", "10%"]);
     const adjustPlanets = useTransform(x, [0, 1], ["0%", "-10%"]);
   return (
     <section className="absolute inset-0 bg-fixed bg-cover bg-center -z-100">

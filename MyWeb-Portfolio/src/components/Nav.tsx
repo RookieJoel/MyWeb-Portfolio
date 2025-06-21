@@ -11,7 +11,8 @@ export default function Nav() {
     setIsOpen(!isOpen);
   };
 
-  const scrollToSection = (href: string) => {
+  const scrollToSection = (href: string ,  event?: React.MouseEvent) => {
+    event?.preventDefault();
     const element = document.querySelector(href);
     element?.scrollIntoView({ behavior: "smooth" });
     toggleMenu();

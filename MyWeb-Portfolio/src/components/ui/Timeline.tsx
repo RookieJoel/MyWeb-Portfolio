@@ -1,4 +1,3 @@
-"use client";
 import {
   useScroll,
   useTransform,
@@ -48,7 +47,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             <h2 className="text-3xl font-bold mb-6 text-center text-white dark:text-neutral-200">
             Timeline <span className="text-yellow-500">of My Journey</span>
             </h2>
-            <p className="text-center mb-12 text-xl">
+            <p className="text-center mb-8 text-xl dark:text-neutral-400">
             A brief overview of my journey so far.
             </p>
         </div>
