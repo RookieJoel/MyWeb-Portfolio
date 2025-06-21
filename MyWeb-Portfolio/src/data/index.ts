@@ -1,4 +1,4 @@
-  export const navItems = [
+export const navItems = [
     { name: "Home", href: "#hero" },
     { name: "Experience", href: "#experiences" },
     { name: "Skills", href: "#skills" },
@@ -7,33 +7,71 @@
     { name: "Contact", href: "#contact" },
 ];
 
-export const skillsBackend= [
+interface SkillsProps {
+    id:number;
+    Imgname: string;
+    img:string;
+	ImgclassName?: string;
+}
+
+export const skillsBackend:SkillsProps[] =[
 	{
 		id: 1,
-		name: "JavaScript",
-		icon: "assets/javascript.png",
+		Imgname: "TypeScript",
+		img: "tech/ts.png"
 	},
 	{
 		id: 2,
-		name: "TypeScript",
-		icon: "assets/react.png",
+		Imgname: "javascript",
+		img: "tech/js.png"
 	},
 	{
 		id: 3,
-		name: "Node.js",
-		icon: "assets/nodejs.png",
+		Imgname: "golang",
+		img: "tech/go.png"
 	},
 	{
 		id: 4,
-		name: "Express",
-		icon: "assets/express.png",
+		Imgname: "ndodejs",
+		img: "tech/nodejs.png",
+		ImgclassName: "scale-121"
 	},
 	{
 		id: 5,
-		name: "MongoDB",
-		icon: "assets/mongodb.png",
+		Imgname: "Express",
+		img: "tech/express.png",
+		ImgclassName: "scale-110"
 	},
 
+
+]
+
+export const skillsFrontend:SkillsProps[] = [
+	{
+		id: 1,
+		Imgname: "React",
+		img: "tech/React.webp"
+	},
+	{
+		id: 2,
+		Imgname: "svelte",
+		img: "tech/svelte.png"
+	},
+	{
+		id: 3,
+		Imgname: "Tailwind CSS",
+		img: "tech/tailwind.png"
+	},
+	{
+		id: 4,
+		Imgname: "HTML5",
+		img: "tech/html.webp"
+	},
+	{
+		id: 5,
+		Imgname: "CSS3",
+		img: "tech/css.webp"
+	}
 ]
 
 export const gridItems = [
