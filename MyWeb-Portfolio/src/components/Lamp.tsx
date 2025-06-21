@@ -1,9 +1,9 @@
 import { motion } from "motion/react";
-import { LampContainer } from "./ui/lamp";
+import { LampContainer } from "./ui/Lamp";
 
 export function Lamp() {
   return (
-    <div id="skills">
+    <div id="skills" className="relative w-full overflow-clip scroll-mt-15 bg-[#010413]">
     <LampContainer >
       <motion.h1
         initial={{ opacity: 0.5, y: 100 }}
