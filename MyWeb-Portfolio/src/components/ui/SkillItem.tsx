@@ -22,7 +22,8 @@ export default function SkillItem({ title, skills ,Maxcols}: SkillItemProps) {
       >
         <HyperText>{title}</HyperText>
       </div>
-      <ul className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 ${Maxcols ? `lg:grid-cols-${Maxcols}` : "lg:grid-cols-5"} gap-4 mx-4 md:mx-10 lg:mx-[180px] justify-items-center`}>
+      <div className="flex flex-row justify-center">
+      <ul className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-${Maxcols ? Maxcols : 5 } gap-4 mx-4 md:mx-10 lg:mx-[180px] w-fit items-center justify-items-center`}>
         {skills.map(({ id, Imgname, img, ImgclassName }) => (
           <li
             key={id}
@@ -41,6 +42,7 @@ export default function SkillItem({ title, skills ,Maxcols}: SkillItemProps) {
           </li>
         ))}
       </ul>
+      </div>
     </>
   );
 }

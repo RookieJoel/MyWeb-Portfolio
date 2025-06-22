@@ -99,6 +99,12 @@ export const DatabaseSkills:SkillsProps[] = [
 		Imgname: "MySQL",
 		img: "tech/mysql.png"
 	},
+	{
+		id: 4,
+		Imgname: "Supabase",
+		img: "tech/supabase.png",
+		// ImgclassName: "scale-80 !object-contain"
+	},
 ];
 
 export const skillsDevOps:SkillsProps[] = [
@@ -132,7 +138,7 @@ type SkillItemProps = {
 export const skillsSectionItems:SkillItemProps[] = [
 	{ title: "Backend", skills: skillsBackend },
 	{ title: "Frontend", skills: skillsFrontend },
-	{ title: "Database", skills: DatabaseSkills , Maxcols: 4},
+	{ title: "Database", skills: DatabaseSkills , Maxcols: 3},
 	{ title: "DevOps", skills: skillsDevOps , Maxcols: 4}
 ];
 
