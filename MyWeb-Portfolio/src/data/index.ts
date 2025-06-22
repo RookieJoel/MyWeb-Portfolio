@@ -1,10 +1,9 @@
-import { title } from "framer-motion/client";
 
 export const navItems = [
     { name: "Home", href: "#hero" },
     { name: "Experience", href: "#experiences" },
     { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#proj" },
+    { name: "Projects", href: "#projects" },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
 ];
@@ -138,7 +137,7 @@ type SkillItemProps = {
 export const skillsSectionItems:SkillItemProps[] = [
 	{ title: "Backend", skills: skillsBackend },
 	{ title: "Frontend", skills: skillsFrontend },
-	{ title: "Database", skills: DatabaseSkills , Maxcols: 3},
+	{ title: "Database", skills: DatabaseSkills , Maxcols: 4},
 	{ title: "DevOps", skills: skillsDevOps , Maxcols: 4}
 ];
 
