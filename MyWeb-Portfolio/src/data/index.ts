@@ -1,3 +1,5 @@
+import { title } from "framer-motion/client";
+
 export const navItems = [
     { name: "Home", href: "#hero" },
     { name: "Experience", href: "#experiences" },
@@ -12,6 +14,7 @@ interface SkillsProps {
     Imgname: string;
     img:string;
 	ImgclassName?: string;
+	cols?: string;
 }
 
 export const skillsBackend:SkillsProps[] =[
@@ -55,24 +58,89 @@ export const skillsFrontend:SkillsProps[] = [
 	{
 		id: 2,
 		Imgname: "svelte",
-		img: "tech/svelte.png"
+		img: "tech/svelte.png",
+		ImgclassName: "!object-contain scale-80"
 	},
 	{
 		id: 3,
 		Imgname: "Tailwind CSS",
-		img: "tech/tailwind.png"
+		img: "tech/tailwind.png",
+		ImgclassName: "!object-contain scale-90"
 	},
 	{
 		id: 4,
 		Imgname: "HTML5",
-		img: "tech/html.webp"
+		img: "tech/html.webp",
+		ImgclassName: "scale-80"
+
 	},
 	{
 		id: 5,
 		Imgname: "CSS3",
-		img: "tech/css.webp"
+		img: "tech/css.webp",
+		ImgclassName: "scale-80"
 	}
 ]
+
+export const DatabaseSkills:SkillsProps[] = [
+	{
+		id: 1,
+		Imgname: "MongoDB",
+		img: "tech/mongo.png"
+	},
+	{
+		id: 2,
+		Imgname: "PostgreSQL",
+		img: "tech/pgsql.png",
+		ImgclassName: "scale-80 !object-contain"
+	},
+	{
+		id: 3,
+		Imgname: "MySQL",
+		img: "tech/mysql.png"
+	},
+	{
+		id: 4,
+		Imgname: "Supabase",
+		img: "tech/supabase.png",
+		// ImgclassName: "scale-80 !object-contain"
+	},
+];
+
+export const skillsDevOps:SkillsProps[] = [
+	{
+		id: 1,
+		Imgname: "Docker",
+		img: "tech/docker.webp",
+	},
+	{
+		id: 2,
+		Imgname: "AWS",
+		img: "tech/AWS.webp",
+	},
+	{
+		id: 3,
+		Imgname: "Kubernetes",
+		img: "tech/kubernetes.png",
+	},
+	{
+		id: 4,
+		Imgname: "Git",
+		img: "tech/git.png"
+	},
+];
+type SkillItemProps = {
+  title: string;
+  Maxcols?: number;
+  skills: SkillsProps[];
+};
+
+export const skillsSectionItems:SkillItemProps[] = [
+	{ title: "Backend", skills: skillsBackend },
+	{ title: "Frontend", skills: skillsFrontend },
+	{ title: "Database", skills: DatabaseSkills , Maxcols: 3},
+	{ title: "DevOps", skills: skillsDevOps , Maxcols: 4}
+];
 
 export const gridItems = [
 	{
