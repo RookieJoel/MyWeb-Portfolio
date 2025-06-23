@@ -13,7 +13,7 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="relative overflow-clip scroll-mt-15 w-full"
+      className="relative overflow-clip scroll-mt-15 w-full mb-20"
     >
       {skillsSectionItems.map((item,idx) => (
         <SkillItem

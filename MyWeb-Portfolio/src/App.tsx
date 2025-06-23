@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { Lamp} from "./components/Lamp";
 import { About } from "./components/About";
 import { Skills } from "./components/Skills";
+import { Projects } from "./components/Projects";
 
 export default function App() {
   useEffect(() => {
@@ -25,6 +26,7 @@ export default function App() {
       <Journey />
       <Lamp />
       <Skills />
+      <Projects />
       {/* <About /> */}
     </>
   )
