@@ -2,11 +2,11 @@ import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "../hooks/use-outside-click";
 import { ProjCards } from "../data/ProjectsCard";
-
+import { cn } from "../lib/utils";
 export function Projects() {
-  const [active, setActive] = useState<(typeof ProjCards)[number] | boolean | null>(
-    null
-  );
+  const [active, setActive] = useState<
+    (typeof ProjCards)[number] | boolean | null
+  >(null);
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -31,7 +31,7 @@ export function Projects() {
 
   return (
     <div
-      className="w-full min-h-screen flex flex-col items-center bg-[#010413]"
+      className="w-full min-h-screen flex flex-col items-center bg-[#010413] scroll-mt-20 mb-20 relative"
       id="projects"
     >
       <AnimatePresence>
@@ -129,33 +129,34 @@ export function Projects() {
           </div>
         ) : null}
         <motion.div>
-            <h1 className="text-3xl md:text-4xl font-bold text-white mt-5 mb-10">
-              Projects
-            </h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-white mt-5 mb-10">
+            Projects
+          </h1>
         </motion.div>
       </AnimatePresence>
-      <ul className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-start gap-4 my-10">
+      <ul className="max-w-7xl w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start gap-4 my-5">
         {ProjCards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col  hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4 flex flex-col bg-amber-950 rounded-xl cursor-pointer h-full hover:bg-amber-600 dark:hover:bg-amber-700 transition-colors duration-300 ease-in-out relative overflow-hidden"
+            whileHover={{ color:"green" }}
           >
-            <div className="flex gap-4 flex-col  w-full">
+            <div className="flex gap-4 flex-col w-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
                 <img
                   width={100}
                   height={100}
                   src={card.src}
                   alt={card.title}
-                  className="h-full w-full rounded-lg object-cover object-top"
+                  className="asepct-ratio-1/1 w-full object-cover rounded-lg sm:rounded-tr-lg sm:rounded-tl-lg"
                 />
               </motion.div>
               <div className="flex justify-center items-center flex-col">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
+                  className="font-bold text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
                 >
                   {card.title}
                 </motion.h3>
