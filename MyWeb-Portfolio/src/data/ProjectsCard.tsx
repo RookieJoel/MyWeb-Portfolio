@@ -23,7 +23,8 @@ export const ProjCards = [
     },
   },
   {
-    description: "educational platform designed to enhance collaboration and knowledge-sharing among students",
+    description:
+      "educational platform designed to enhance collaboration and knowledge-sharing among students",
     title: "MyCourseMate",
     src: "/projects/mcm.png",
     ctaText: "Visit",
@@ -45,43 +46,58 @@ export const ProjCards = [
   {
     description: "full‑stack development using SvelteKit",
     title: "ShopShap with SvelteKit",
-    src: "https://assets.aceternity.com/demos/metallica.jpeg",
+    src: "/projects/shopshap.png",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://github.com/RookieJoel/ShopShap-with-sveltekit",
     content: () => {
       return (
-        <p>
-          Metallica, an iconic American heavy metal band, is renowned for their
-          powerful sound and intense performances that resonate deeply with
-          their audience. Formed in Los Angeles, California, they have become a
-          cultural icon in the heavy metal music industry. <br /> <br /> Their
-          songs often reflect themes of aggression, social issues, and personal
-          struggles, capturing the essence of the heavy metal genre. With a
-          career spanning over four decades, Metallica has released numerous hit
-          albums and singles that have garnered them a massive fan following
-          both in the United States and abroad.
-        </p>
+        <>
+          <p>
+            This mini-project is a personal playground for practicing full‑stack
+            development using SvelteKit. It covers both the frontend and backend
+            aspects of an e‑commerce style application.
+          </p>
+          <p>
+            Features
+            <br />
+            - SvelteKit powered frontend using TypeScript
+            <br />
+            - Tailwind CSS for styling
+            <br />
+            - MongoDB with Mongoose for data storage
+            <br />
+            - User authentication with JWT tokens and Google OAuth
+            <br />- Fetches product data from DummyJSON
+          </p>
+        </>
       );
     },
   },
   {
-    description: "Lord Himesh",
-    title: "Aap Ka Suroor",
-    src: "https://assets.aceternity.com/demos/aap-ka-suroor.jpeg",
+    description:
+      "visually appealing fashion storefront prototype built with Svelte and Tailwind CSS",
+    title: "Shop Web Design",
+    src: "/projects/shop.png",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
         <p>
-          Himesh Reshammiya, a renowned Indian music composer, singer, and
-          actor, is celebrated for his distinctive voice and innovative
-          compositions. Born in Mumbai, India, he has become a prominent figure
-          in the Bollywood music industry. <br /> <br /> His songs often feature
-          a blend of contemporary and traditional Indian music, capturing the
-          essence of modern Bollywood soundtracks. With a career spanning over
-          two decades, Himesh Reshammiya has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
+          🛍️ ShopShap
+          <br />
+          <br />
+          Welcome to ShopShap, a modern, responsive fashion storefront built as
+          a mini-project to practice UI/UX design using the Svelte framework and
+          Tailwind CSS.
+          <br />
+          <br />
+          As someone passionate about both design and development, I wanted to
+          challenge myself by learning Svelte, a fast and elegant JavaScript
+          framework. Pairing it with Tailwind CSS allowed me to rapidly
+          prototype beautiful, responsive layouts while keeping code
+          maintainable and scalable. 🧠 My goal: Build something that looks
+          great, works cleanly, and shows off how fun and powerful modern
+          frontend tools can be.
         </p>
       );
     },

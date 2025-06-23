@@ -36,7 +36,7 @@ export const skillsBackend:SkillsProps[] =[
 		id: 4,
 		Imgname: "ndodejs",
 		img: "tech/nodejs.png",
-		ImgclassName: "scale-121"
+		ImgclassName: "scale-123"
 	},
 	{
 		id: 5,
