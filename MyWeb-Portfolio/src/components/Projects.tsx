@@ -2,7 +2,6 @@ import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "../hooks/use-outside-click";
 import { ProjCards } from "../data/ProjectsCard";
-import { cn } from "../lib/utils";
 export function Projects() {
   const [active, setActive] = useState<
     (typeof ProjCards)[number] | boolean | null
