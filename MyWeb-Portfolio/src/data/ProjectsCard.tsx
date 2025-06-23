@@ -79,7 +79,7 @@ export const ProjCards = [
     title: "Shop Web Design",
     src: "/projects/shop.png",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://github.com/RookieJoel/Shop-Web-Design",
     content: () => {
       return (
         <p>
