@@ -140,9 +140,8 @@ export function Projects() {
             key={card.title}
             onClick={() => setActive(card)}
             className="p-4 flex flex-col bg-amber-950 rounded-xl cursor-pointer h-full hover:bg-amber-600 dark:hover:bg-amber-700 transition-colors duration-300 ease-in-out relative overflow-hidden"
-            whileHover={{ color:"green" }}
           >
-            <div className="flex gap-4 flex-col w-full">
+            <div className="flex gap-4 flex-col w-full h-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
                 <img
                   width={100}
@@ -165,6 +164,50 @@ export function Projects() {
                 >
                   {card.description}
                 </motion.p>
+              </div>
+
+              {/* tech stack button */}         
+              <div className="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center justify-center w-fit mt-auto">
+                <span className="flex flex-row text-xs bg-amber-200 rounded-xl justify-center items-center gap-1 px-3 py-1">
+                  <img
+                    src={"https://www.vectorlogo.zone/logos/java/java-icon.svg"}
+                    alt={card.title}
+                    className="aspect-ratio-1/1 w-6 bg-amber-200 rounded-full"
+                  />
+                  Java
+                </span>
+                <span className="flex flex-row text-xs bg-amber-200 rounded-xl justify-center items-center gap-1 px-3 py-1">
+                  <img
+                    src={"https://www.vectorlogo.zone/logos/java/java-icon.svg"}
+                    alt={card.title}
+                    className="aspect-ratio-1/1 w-6 bg-amber-200 rounded-full"
+                  />
+                  Java
+                </span>
+                <span className="flex flex-row text-xs bg-amber-200 rounded-xl justify-center items-center gap-1 px-3 py-1">
+                  <img
+                    src={"https://www.vectorlogo.zone/logos/java/java-icon.svg"}
+                    alt={card.title}
+                    className="aspect-ratio-1/1 w-6 bg-amber-200 rounded-full"
+                  />
+                  Java
+                </span>
+                <span className="flex flex-row text-xs bg-amber-200 rounded-xl justify-center items-center gap-1 px-3 py-1">
+                  <img
+                    src={"https://www.vectorlogo.zone/logos/java/java-icon.svg"}
+                    alt={card.title}
+                    className="aspect-ratio-1/1 w-6 bg-amber-200 rounded-full"
+                  />
+                  Java
+                </span>
+                <span className="flex flex-row text-xs bg-amber-200 rounded-xl justify-center items-center gap-1 px-3 py-1">
+                  <img
+                    src={"https://www.vectorlogo.zone/logos/java/java-icon.svg"}
+                    alt={card.title}
+                    className="aspect-ratio-1/1 w-6 bg-amber-200 rounded-full"
+                  />
+                  Java
+                </span>
               </div>
             </div>
           </motion.div>
