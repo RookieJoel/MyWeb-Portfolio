@@ -1,7 +1,17 @@
 import { Compare } from "./ui/compare";
 import { FlickeringGrid } from "./ui/FlickeringGrid";
 import { TypingEffect } from "./ui/TypeEffect";
+import { FiGithub, FiMail, FiLinkedin, FiMenu, FiX } from "react-icons/fi";
+import { motion } from "framer-motion";
+
 export function About() {
+
+    const scrollToSection = (href: string ,  event?: React.MouseEvent) => {
+    event?.preventDefault();
+    const element = document.querySelector(href);
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div
       id="about"
@@ -9,7 +19,9 @@ export function About() {
     >
       <div className="flex flex-col items-start justify-center w-full h-full px-10 md:px-20">
         <h1 className="text-4xl font-bold text-white mb-4">
-          <TypingEffect text="About Me" />
+          <TypingEffect
+            text="About Me"
+          />
         </h1>
         <h2 className="text-2xl text-yellow-400 mb-4">
           Hi! I'm <span className="text-amber-300"> Suttanop Chanah</span>,
@@ -27,7 +39,17 @@ export function About() {
           check out my projects here on GitHub. I'm always open to learning and
           collaborating on exciting projects!
         </p>
-      </div>
+
+        {/* contact  */}
+        <motion.button 
+          className="flex items-center px-4 py-2 bg-yellow-400 text-black rounded-md hover:bg-yellow-500 transition-colors duration-300"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={(e) => scrollToSection("#contact", e)}
+        >
+          Hire Me!
+        </motion.button>
+        </div>
       <Compare
         firstImage="https://assets.aceternity.com/code-problem.png"
         secondImage="https://assets.aceternity.com/code-solution.png"
