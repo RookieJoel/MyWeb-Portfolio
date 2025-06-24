@@ -27,7 +27,7 @@ export default function App() {
       <Lamp />
       <Skills />
       <Projects />
-      {/* <About /> */}
+      <About />
     </>
   )
 }
