@@ -122,13 +122,6 @@ export const ProjCards = [
         </>
       );
     },
-    technologies: [
-      "SvelteKit",
-      "TypeScript",
-      "Tailwind CSS",
-      "MongoDB",
-      "Mongoose", 
-    ]
   },
   {
     description:
