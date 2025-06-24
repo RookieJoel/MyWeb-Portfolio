@@ -7,6 +7,8 @@ import { Lamp} from "./components/Lamp";
 import { About } from "./components/About";
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function App() {
   useEffect(() => {
@@ -27,7 +29,9 @@ export default function App() {
       <Lamp />
       <Skills />
       <Projects />
-      {/* <About /> */}
+      <About />
+      <Contact />
+      <Footer />
     </>
   )
 }

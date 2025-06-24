@@ -11,7 +11,11 @@
   },
   "dependencies": {
     "@splinetool/react-spline": "^4.0.0",
+    "@tabler/icons-react": "^3.34.0",
     "@tailwindcss/vite": "^4.1.10",
+    "@tsparticles/engine": "^3.8.1",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.8.1",
     "aos": "^2.3.4",
     "clsx": "^2.1.1",
     "framer-motion": "^12.18.1",
