@@ -122,6 +122,23 @@ export function Projects() {
                       ? active.content()
                       : active.content}
                   </motion.div>
+                  <div className="flex flex-wrap gap-2 mt-4 px-4 pb-4">
+                    {active.techList?.map((tech) => (
+                      <span
+                        key={tech.techStack}
+                        className="flex flex-row text-xs bg-gray-200 dark:bg-neutral-800 rounded-full justify-center items-center gap-2 px-3 py-1"
+                      >
+                        <img
+                          src={tech.icon}
+                          alt={tech.techStack}
+                          className="w-5 h-5 object-contain"
+                        />
+                        <span className="text-neutral-700 dark:text-neutral-300 font-semibold">
+                          {tech.techStack}
+                        </span>
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -166,49 +183,25 @@ export function Projects() {
                 </motion.p>
               </div>
 
-              {/* tech stack button */}         
-              <div className="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center justify-center w-fit mt-auto">
-                <span className="flex flex-row text-xs bg-amber-200 rounded-xl justify-center items-center gap-1 px-3 py-1">
-                  <img
-                    src={"https://www.vectorlogo.zone/logos/java/java-icon.svg"}
-                    alt={card.title}
-                    className="aspect-ratio-1/1 w-6 bg-amber-200 rounded-full"
-                  />
-                  Java
-                </span>
-                <span className="flex flex-row text-xs bg-amber-200 rounded-xl justify-center items-center gap-1 px-3 py-1">
-                  <img
-                    src={"https://www.vectorlogo.zone/logos/java/java-icon.svg"}
-                    alt={card.title}
-                    className="aspect-ratio-1/1 w-6 bg-amber-200 rounded-full"
-                  />
-                  Java
-                </span>
-                <span className="flex flex-row text-xs bg-amber-200 rounded-xl justify-center items-center gap-1 px-3 py-1">
-                  <img
-                    src={"https://www.vectorlogo.zone/logos/java/java-icon.svg"}
-                    alt={card.title}
-                    className="aspect-ratio-1/1 w-6 bg-amber-200 rounded-full"
-                  />
-                  Java
-                </span>
-                <span className="flex flex-row text-xs bg-amber-200 rounded-xl justify-center items-center gap-1 px-3 py-1">
-                  <img
-                    src={"https://www.vectorlogo.zone/logos/java/java-icon.svg"}
-                    alt={card.title}
-                    className="aspect-ratio-1/1 w-6 bg-amber-200 rounded-full"
-                  />
-                  Java
-                </span>
-                <span className="flex flex-row text-xs bg-amber-200 rounded-xl justify-center items-center gap-1 px-3 py-1">
-                  <img
-                    src={"https://www.vectorlogo.zone/logos/java/java-icon.svg"}
-                    alt={card.title}
-                    className="aspect-ratio-1/1 w-6 bg-amber-200 rounded-full"
-                  />
-                  Java
-                </span>
+              {/* tech stack button */}
+              <div className="flex flex-wrap gap-2 items-center justify-start w-full mt-auto">
+                {card.techList?.map((tech) => (
+                  <span
+                    key={tech.techStack}
+                    className="flex flex-row text-xs bg-amber-200 rounded-xl justify-center items-center gap-1 px-2 py-1"
+                  >
+                    <img
+                      src={tech.icon}
+                      alt={tech.techStack}
+                      className="w-5 h-5 object-contain"
+                    />
+                    <span className="font-semibold text-amber-900">
+                      {tech.techStack}
+                    </span>
+                  </span>
+                ))}
               </div>
+
             </div>
           </motion.div>
         ))}

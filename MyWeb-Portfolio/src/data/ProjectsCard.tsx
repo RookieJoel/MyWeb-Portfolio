@@ -21,6 +21,12 @@ export const ProjCards = [
         </p>
       );
     },
+    techList: [
+      {
+        icon: "/projects/java.svg",
+        techStack: "Java",
+      },
+    ],
   },
   {
     description:
@@ -29,6 +35,24 @@ export const ProjCards = [
     src: "/projects/mcm.png",
     ctaText: "Visit",
     ctaLink: "https://github.com/RookieJoel/Final-Project-CEE/tree/main",
+    techList: [
+      {
+        icon: "/tech/html.webp",
+        techStack: "HTML",
+      },
+      {
+        icon: "/tech/css.webp",
+        techStack: "CSS",
+      },
+      {
+        icon: "/tech/js.png",
+        techStack: "JavaScript",
+      },
+      {
+        icon: "/projects/aws.png",
+        techStack: "AWS",
+      },
+    ],
     content: () => {
       return (
         <p>
@@ -49,6 +73,32 @@ export const ProjCards = [
     src: "/projects/shopshap.png",
     ctaText: "Visit",
     ctaLink: "https://github.com/RookieJoel/ShopShap-with-sveltekit",
+    techList: [
+      {
+        icon: "/tech/svelte.png",
+        techStack: "SvelteKit",
+      },
+      {
+        icon: "/tech/ts.png",
+        techStack: "TypeScript",
+      },
+      {
+        icon: "/tech/tailwind.png",
+        techStack: "Tailwind",
+      },
+      {
+        icon: "/tech/mongo.png",
+        techStack: "MongoDB",
+      },
+      {
+        icon: "/tech/nodejs.png",
+        techStack: "Node.js",
+      },
+      {
+        icon: "/projects/expressjs.png",
+        techStack: "Express.js",
+      },
+    ],
     content: () => {
       return (
         <>
@@ -80,6 +130,20 @@ export const ProjCards = [
     src: "/projects/shop.png",
     ctaText: "Visit",
     ctaLink: "https://github.com/RookieJoel/Shop-Web-Design",
+    techList: [
+      {
+        icon: "/tech/svelte.png",
+        techStack: "Svelte",
+      },
+      {
+        icon: "/tech/tailwind.png",
+        techStack: "Tailwind",
+      },
+      {
+        icon: "/tech/docker.webp",
+        techStack: "Docker",
+      },
+    ],
     content: () => {
       return (
         <p>
