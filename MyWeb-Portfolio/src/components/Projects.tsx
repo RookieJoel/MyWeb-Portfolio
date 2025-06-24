@@ -122,6 +122,23 @@ export function Projects() {
                       ? active.content()
                       : active.content}
                   </motion.div>
+                  <div className="flex flex-wrap gap-2 mt-4 px-4 pb-4">
+                    {active.techList?.map((tech) => (
+                      <span
+                        key={tech.techStack}
+                        className="flex flex-row text-xs bg-gray-200 dark:bg-neutral-800 rounded-full justify-center items-center gap-2 px-3 py-1"
+                      >
+                        <img
+                          src={tech.icon}
+                          alt={tech.techStack}
+                          className="w-5 h-5 object-contain"
+                        />
+                        <span className="text-neutral-700 dark:text-neutral-300 font-semibold">
+                          {tech.techStack}
+                        </span>
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -140,9 +157,8 @@ export function Projects() {
             key={card.title}
             onClick={() => setActive(card)}
             className="p-4 flex flex-col bg-amber-950 rounded-xl cursor-pointer h-full hover:bg-amber-600 dark:hover:bg-amber-700 transition-colors duration-300 ease-in-out relative overflow-hidden"
-            whileHover={{ color:"green" }}
           >
-            <div className="flex gap-4 flex-col w-full">
+            <div className="flex gap-4 flex-col w-full h-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
                 <img
                   width={100}
@@ -166,6 +182,26 @@ export function Projects() {
                   {card.description}
                 </motion.p>
               </div>
+
+              {/* tech stack button */}
+              <div className="flex flex-wrap gap-2 items-center justify-start w-full mt-auto">
+                {card.techList?.map((tech) => (
+                  <span
+                    key={tech.techStack}
+                    className="flex flex-row text-xs bg-amber-200 rounded-xl justify-center items-center gap-1 px-2 py-1"
+                  >
+                    <img
+                      src={tech.icon}
+                      alt={tech.techStack}
+                      className="w-5 h-5 object-contain"
+                    />
+                    <span className="font-semibold text-amber-900">
+                      {tech.techStack}
+                    </span>
+                  </span>
+                ))}
+              </div>
+
             </div>
           </motion.div>
         ))}
