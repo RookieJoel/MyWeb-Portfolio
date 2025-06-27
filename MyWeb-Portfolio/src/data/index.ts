@@ -40,9 +40,9 @@ export const skillsBackend:SkillsProps[] =[
 	},
 	{
 		id: 5,
-		Imgname: "Express",
-		img: "tech/express.png",
-		ImgclassName: "scale-110"
+		Imgname: "FastAPI",
+		img: "tech/fastapi.png",
+		ImgclassName: "scale-80 !object-contain"
 	},
 
 
