@@ -115,8 +115,9 @@ export const skillsDevOps:SkillsProps[] = [
 	},
 	{
 		id: 2,
-		Imgname: "AWS",
-		img: "tech/AWS.webp",
+		Imgname: "OpenShift",
+		img: "tech/openshift.png",
+		ImgclassName: "scale-80 !object-contain"
 	},
 	{
 		id: 3,
