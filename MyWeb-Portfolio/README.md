@@ -1,15 +1,71 @@
-# React + TypeScript + Vite
+# Suttanop Chanah Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design** - Works on all devices
+- **Interactive Contact Form** - Powered by EmailJS
+- **3D Effects** - Interactive UI components
+- **Dark Theme** - Modern dark design
+- **Performance Optimized** - Fast loading with Vite
 
-## Expanding the ESLint configuration
+## Setup Instructions
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 1. Clone and Install
+```bash
+git clone https://github.com/RookieJoel/MyWeb-Portfolio.git
+cd MyWeb-Portfolio/MyWeb-Portfolio
+npm install
+```
+
+### 2. Environment Variables
+Copy the example environment file and configure your settings:
+```bash
+cp .env.example .env
+```
+
+Edit `.env` with your actual values:
+```bash
+# EmailJS Configuration
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id  
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+
+# Contact Information
+VITE_MY_EMAIL=your-email@example.com
+
+# Social Media Links
+VITE_GITHUB_URL=https://github.com/yourusername
+VITE_LINKEDIN_URL=https://linkedin.com/in/yourusername
+```
+
+### 3. EmailJS Setup
+1. Go to [EmailJS](https://www.emailjs.com/)
+2. Create an account and service
+3. Create an email template using the provided template in `EMAILJS_SETUP.md`
+4. Get your Service ID, Template ID, and Public Key
+5. Add them to your `.env` file
+
+### 4. Run Development Server
+```bash
+npm run dev
+```
+
+### 5. Build for Production
+```bash
+npm run build
+```
+
+## Tech Stack
+
+- **React 19** - UI Framework  
+- **TypeScript** - Type Safety
+- **Vite** - Build Tool
+- **Tailwind CSS** - Styling
+- **Framer Motion** - Animations
+- **EmailJS** - Contact Form
+- **Lucide React** - Icons
 
 ```js
 export default tseslint.config({

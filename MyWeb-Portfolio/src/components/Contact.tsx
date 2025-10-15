@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { CometCard } from './ui/comet-card'
 import emailjs from '@emailjs/browser'
-import { emailJSConfig } from '../config/emailjs'
+import { emailJSConfig, contactEmail } from '../config/emailjs'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -33,6 +33,11 @@ export default function Contact() {
       // EmailJS configuration from config file
       const { serviceID, templateID, publicKey } = emailJSConfig;
 
+      // Validate environment variables
+      if (!serviceID || !templateID || !publicKey) {
+        throw new Error('EmailJS configuration is missing. Please check your environment variables.');
+      }
+
       // สร้างเวลาปัจจุบันสำหรับส่งไปใน email
       const currentTime = new Date().toLocaleString('th-TH', {
         timeZone: 'Asia/Bangkok',
@@ -52,7 +57,7 @@ export default function Contact() {
         subject: formData.subject || 'Job Inquiry',
         message: formData.message,
         time: currentTime,
-        to_email: 'jojackchanah@gmail.com', // Your email
+        to_email: contactEmail,
       };
 
       await emailjs.send(serviceID, templateID, templateParams, publicKey);
@@ -237,7 +242,7 @@ export default function Contact() {
                   className="mt-4 p-4 bg-red-500/20 border border-red-500/30 rounded-lg"
                 >
                   <p className="text-red-400 text-sm font-medium">
-                    ❌ Failed to send message. Please try again or contact me directly at jojackchanah@gmail.com
+                    ❌ Failed to send message. Please try again or contact me directly at {contactEmail}
                   </p>
                 </motion.div>
               )}
@@ -276,7 +281,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-white font-medium">Email</h3>
-                  <p className="text-gray-400">jojackchanah@gmail.com</p>
+                  <p className="text-gray-400">{contactEmail}</p>
                 </div>
               </div>
 

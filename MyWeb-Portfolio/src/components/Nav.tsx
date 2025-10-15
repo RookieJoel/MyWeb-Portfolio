@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { FiGithub, FiMail, FiMenu, FiX } from "react-icons/fi";
 import { navItems } from "../data/index";
 import { useState } from "react";
+import { socialLinks } from "../config/emailjs";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -128,7 +129,7 @@ export default function Nav() {
               delay: 0.5,
             }}
             whileHover={{ scale: 1.2 }}
-            href="https://github.com/RookieJoel"
+            href={socialLinks.github}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -203,7 +204,7 @@ export default function Nav() {
           <div className="flex space-x-4 ml-4 justify-center">
             <motion.a 
               whileHover={{ scale: 1.2 }} 
-              href="https://github.com/RookieJoel"
+              href={socialLinks.github}
               target="_blank"
               rel="noopener noreferrer"
             >
