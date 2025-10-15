@@ -7,8 +7,6 @@ interface ImportMetaEnv {
   readonly VITE_MY_EMAIL: string
   readonly VITE_GITHUB_URL: string
   readonly VITE_LINKEDIN_URL: string
-  readonly VITE_PORTFOLIO_TITLE: string
-  readonly VITE_PORTFOLIO_DESCRIPTION: string
 }
 
 interface ImportMeta {

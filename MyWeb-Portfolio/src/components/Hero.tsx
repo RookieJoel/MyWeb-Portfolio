@@ -152,10 +152,10 @@ export default function Hero() {
             translateZ="50"
             className="mt-3 text-center"
           >
-            <p className="text-gray-700 text-sm font-handwriting" style={{ fontFamily: 'cursive' }}>
+            <p className="text-gray-700 text-xl font-handwriting" style={{ fontFamily: 'cursive' }}>
               "Suttanop Chanah"
             </p>
-            <p className="text-gray-500 text-xs mt-1" style={{ fontFamily: 'cursive' }}>
+            <p className="text-gray-500 text-lg mt-1" style={{ fontFamily: 'cursive' }}>
               Go Beyond Limits!!!
             </p>
           </CardItem>
