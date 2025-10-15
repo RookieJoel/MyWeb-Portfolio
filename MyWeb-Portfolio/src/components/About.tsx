@@ -2,13 +2,6 @@ import { Compare } from "./ui/compare";
 import { TypingEffect } from "./ui/TypeEffect";
 
 export function About() {
-
-    const scrollToSection = (href: string ,  event?: React.MouseEvent) => {
-    event?.preventDefault();
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <div
       id="about"

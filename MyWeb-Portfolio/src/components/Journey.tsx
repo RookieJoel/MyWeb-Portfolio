@@ -1,6 +1,5 @@
 import { Timeline } from "./ui/Timeline";
 import { timelineData } from "../data/timelineData";
-import { BackgroundBeams } from "./ui/BackgroundBeam";
 
 export function Journey() {
   return (

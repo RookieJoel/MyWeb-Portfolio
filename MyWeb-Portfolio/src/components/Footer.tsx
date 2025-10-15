@@ -1,5 +1,5 @@
 
-import { FiGithub, FiMail, FiLinkedin, FiMenu, FiX } from "react-icons/fi";
+import { FiGithub, FiMail, FiLinkedin } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 export default function Footer() {
