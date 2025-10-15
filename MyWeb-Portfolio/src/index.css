@@ -5,3 +5,12 @@ html {
   font-family: 'Inter', sans-serif;
   background-color: #010413;
 }
+
+/* 3D Transform utilities for CometCard */
+.perspective-distant {
+  perspective: 1000px;
+}
+
+.transform-3d {
+  transform-style: preserve-3d;
+}

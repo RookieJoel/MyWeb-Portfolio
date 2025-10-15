@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiGithub, FiMail, FiLinkedin, FiMenu, FiX } from "react-icons/fi";
+import { FiGithub, FiMail, FiMenu, FiX } from "react-icons/fi";
 import { navItems } from "../data/index";
 import { useState } from "react";
 
@@ -13,9 +13,29 @@ export default function Nav() {
 
   const scrollToSection = (href: string ,  event?: React.MouseEvent) => {
     event?.preventDefault();
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
-    toggleMenu();
+    
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+    
+    if (isOpen) {
+      toggleMenu(); // ปิดเมนูเฉพาะตอนที่เมนูเปิดอยู่
+    }
+  };
+
+  const scrollToSectionDesktop = (href: string, event?: React.MouseEvent) => {
+    event?.preventDefault();
+    
+    // ให้เวลา DOM render เสร็จก่อน
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
   };
 
   return (
@@ -115,7 +135,7 @@ export default function Nav() {
             <FiGithub className="text-2xl hover:text-yellow-400 transition-colors duration-300" />
           </motion.a>
 
-          <motion.a
+          <motion.button
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -125,25 +145,12 @@ export default function Nav() {
               delay: 0.5,
             }}
             whileHover={{ scale: 1.2 }}
-            href=""
+            onClick={(e) => scrollToSectionDesktop('#contact', e)}
+            className="cursor-pointer bg-transparent border-none p-0"
+            type="button"
           >
             <FiMail className="text-2xl hover:text-yellow-400 transition-colors duration-300" />
-          </motion.a>
-
-          <motion.a
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 20,
-              delay: 0.5,
-            }}
-            whileHover={{ scale: 1.2 }}
-            href=""
-          >
-            <FiLinkedin className="text-2xl hover:text-yellow-400 transition-colors duration-300" />
-          </motion.a>
+          </motion.button>
         </div>
         {/* burger menu */}
         <div className="flex md:hidden items-center ml-2">
@@ -194,32 +201,28 @@ export default function Nav() {
         </ul>
         <div className="py-4 border-t border-amber-300 ">
           <div className="flex space-x-4 ml-4 justify-center">
-            <motion.a whileHover={{ scale: 1.2 }} href="">
+            <motion.a 
+              whileHover={{ scale: 1.2 }} 
+              href="https://github.com/RookieJoel"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FiGithub className="text-2xl hover:text-yellow-400 transition-colors duration-300" />
             </motion.a>
 
-            <motion.a whileHover={{ scale: 1.2 }} href="">
-              <FiMail className="text-2xl hover:text-yellow-400 transition-colors duration-300" />
-            </motion.a>
-
-            <motion.a
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 300,
-                damping: 20,
-                delay: 0.5,
-              }}
-              whileHover={{ scale: 1.2 }}
-              href=""
+            <motion.button 
+              whileHover={{ scale: 1.2 }} 
+              onClick={(e) => scrollToSection('#contact', e)}
+              className="cursor-pointer bg-transparent border-none p-0"
+              type="button"
             >
-              <FiLinkedin className="text-2xl hover:text-yellow-400 transition-colors duration-300" />
-            </motion.a>
+              <FiMail className="text-2xl hover:text-yellow-400 transition-colors duration-300" />
+            </motion.button>
+
           </div>
           <div className="mt-4 px-4">
             <button
-              onClick={toggleMenu}
+              onClick={() => scrollToSection('#contact')}
               className="mt-5 w-full px-4 block bg-yellow-400 text-white font-bold py-2 rounded-lg hover:bg-yellow-600 transition-colors duration-300"
             >
               Contact Me
