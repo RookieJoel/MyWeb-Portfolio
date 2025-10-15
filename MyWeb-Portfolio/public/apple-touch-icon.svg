@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <!-- Background -->
+  <rect width="180" height="180" rx="40" fill="#010413"/>
+  
+  <!-- Main Design -->
+  <g fill="#fbbf24" stroke="#fbbf24" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left bracket -->
+    <path d="M50 60 L30 90 L50 120"/>
+    <!-- Right bracket -->
+    <path d="M130 60 L150 90 L130 120"/>
+    <!-- Center slash -->
+    <path d="M80 120 L100 60"/>
+  </g>
+  
+  <!-- Initials -->
+  <text x="90" y="150" text-anchor="middle" fill="#fbbf24" font-family="Arial, sans-serif" font-size="24" font-weight="bold">SC</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="45" cy="45" r="3" fill="#fbbf24" opacity="0.6"/>
+  <circle cx="135" cy="45" r="3" fill="#fbbf24" opacity="0.6"/>
+  <circle cx="45" cy="135" r="3" fill="#fbbf24" opacity="0.6"/>
+  <circle cx="135" cy="135" r="3" fill="#fbbf24" opacity="0.6"/>
+  
+  <!-- Border -->
+  <rect width="180" height="180" rx="40" fill="none" stroke="#fbbf24" stroke-width="3"/>
+</svg>

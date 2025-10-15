@@ -68,7 +68,7 @@ export function About() {
         secondImage="/futureme.png"
         firstImageClassName="object-cover object-left-top"
         secondImageClassname="object-cover object-left-center"
-        className="h-[250px] w-[200px] md:h-[500px] md:w-[500px]"
+        className="h-[250px] w-[200px] md:h-[500px] md:w-[500px] mr-15"
         slideMode="hover"
       />
     </div>
