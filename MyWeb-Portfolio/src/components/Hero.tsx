@@ -1,9 +1,43 @@
 import { motion } from "framer-motion";
 import { TypingEffect } from "./ui/TypeEffect";
 import Parallax from "./ui/Parallax";
-import { FiChevronsDown } from "react-icons/fi";
+import { FiChevronsDown, FiEye, FiDownload, FiExternalLink } from "react-icons/fi";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
+import { useState } from "react";
+import { ResumeModal } from "./ui/ResumeModal";
 export default function Hero() {
+  const [isDownloading, setIsDownloading] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleViewResume = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleDownloadResume = async () => {
+    setIsDownloading(true);
+    try {
+      const response = await fetch('/Suttanop_Chanah_Resume.pdf');
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'Suttanop_Chanah_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Download failed:', error);
+      // Fallback to simple download
+      const link = document.createElement('a');
+      link.href = '/Suttanop_Chanah_Resume.pdf';
+      link.download = 'Suttanop_Chanah_Resume.pdf';
+      link.click();
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
   return (
     <section id="hero"className="flex flex-col lg:flex-row items-center justify-center min-h-screen text-white relative overflow-hidden">
       {/* left content */}
@@ -56,23 +90,31 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex gap-4 mb-8"
+            className="flex flex-col sm:flex-row gap-4 mb-8"
           >
-            <a
-              href="/Suttanop_Chanah_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-semibold rounded-lg shadow-lg hover:from-amber-500 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+            {/* View Resume Button */}
+            <button
+              onClick={handleViewResume}
+              className="group px-6 py-3 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-semibold rounded-lg shadow-lg hover:from-amber-500 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center gap-2"
             >
-              📄 View Resume
-            </a>
-            <a
-              href="/Suttanop_Chanah_Resume.pdf"
-              download="Suttanop_Chanah_Resume.pdf"
-              className="px-6 py-3 bg-transparent border-2 border-amber-400 text-amber-400 font-semibold rounded-lg hover:bg-amber-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+              <FiEye className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              View Resume
+              <FiExternalLink className="w-4 h-4 opacity-70" />
+            </button>
+
+            {/* Download Resume Button */}
+            <button
+              onClick={handleDownloadResume}
+              disabled={isDownloading}
+              className={`group px-6 py-3 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 ${
+                isDownloading 
+                  ? 'bg-gray-600 text-gray-300 cursor-not-allowed' 
+                  : 'bg-transparent border-2 border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-black'
+              }`}
             >
-              📥 Download Resume
-            </a>
+              <FiDownload className={`w-5 h-5 transition-transform ${isDownloading ? 'animate-bounce' : 'group-hover:scale-110'}`} />
+              {isDownloading ? 'Downloading...' : 'Download Resume'}
+            </button>
           </motion.div>
         </div>
         {/* <Spline
@@ -128,6 +170,13 @@ export default function Hero() {
       </div>
       {/* right content */}
       <Parallax />
+
+      {/* Resume Modal */}
+      <ResumeModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onDownload={handleDownloadResume}
+      />
     </section>
   );
 }

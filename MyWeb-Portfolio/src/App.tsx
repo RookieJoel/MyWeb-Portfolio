@@ -7,6 +7,7 @@ import { About } from "./components/About";
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import Contact from "./components/Contact";
+import { ResumeQuickAccess } from "./components/ui/ResumeQuickAccess";
 
 export default function App() {
   useEffect(() => {
@@ -28,6 +29,9 @@ export default function App() {
       <Projects />
       <About />
       <Contact />
+      
+      {/* Floating Resume Quick Access */}
+      <ResumeQuickAccess />
     </>
   )
 }
