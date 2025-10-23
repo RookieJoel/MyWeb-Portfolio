@@ -16,7 +16,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, onDow
   };
 
   const handleOpenFullscreen = () => {
-    window.open('/Suttanop_Chanah_Resume.pdf', '_blank');
+    window.open('/Suttanop-Chanah-Resume.pdf', '_blank');
   };
 
   return (
@@ -42,7 +42,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, onDow
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                <span className="ml-4 font-medium text-gray-700">Suttanop_Chanah_Resume.pdf</span>
+                <span className="ml-4 font-medium text-gray-700">Suttanop-Chanah-Resume.pdf</span>
               </div>
               
               <div className="flex items-center gap-2">
@@ -75,7 +75,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, onDow
             {/* PDF Viewer */}
             <div className="relative bg-gray-100 flex items-center justify-center min-h-[500px]">
               <iframe
-                src="/Suttanop_Chanah_Resume.pdf"
+                src="/Suttanop-Chanah-Resume.pdf"
                 className="w-full h-[70vh] border-0"
                 title="Resume Preview"
               />

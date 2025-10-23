@@ -13,12 +13,12 @@ export const ResumeQuickAccess: React.FC<ResumeQuickAccessProps> = ({ className 
   const handleDownload = async () => {
     setIsDownloading(true);
     try {
-      const response = await fetch('/Suttanop_Chanah_Resume.pdf');
+      const response = await fetch('/Suttanop-Chanah-Resume.pdf');
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = 'Suttanop_Chanah_Resume.pdf';
+      link.download = 'Suttanop-Chanah-Resume.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -26,8 +26,8 @@ export const ResumeQuickAccess: React.FC<ResumeQuickAccessProps> = ({ className 
     } catch (error) {
       console.error('Download failed:', error);
       const link = document.createElement('a');
-      link.href = '/Suttanop_Chanah_Resume.pdf';
-      link.download = 'Suttanop_Chanah_Resume.pdf';
+      link.href = '/Suttanop-Chanah-Resume.pdf';
+      link.download = 'Suttanop-Chanah-Resume.pdf';
       link.click();
     } finally {
       setIsDownloading(false);
@@ -35,7 +35,7 @@ export const ResumeQuickAccess: React.FC<ResumeQuickAccessProps> = ({ className 
   };
 
   const handleView = () => {
-    window.open('/Suttanop_Chanah_Resume.pdf', '_blank');
+    window.open('/Suttanop-Chanah-Resume.pdf', '_blank');
   };
 
   return (

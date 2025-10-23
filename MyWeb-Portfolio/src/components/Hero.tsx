@@ -16,12 +16,12 @@ export default function Hero() {
   const handleDownloadResume = async () => {
     setIsDownloading(true);
     try {
-      const response = await fetch('/Suttanop_Chanah_Resume.pdf');
+      const response = await fetch('/Suttanop-Chanah-Resume.pdf');
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = 'Suttanop_Chanah_Resume.pdf';
+      link.download = 'Suttanop-Chanah-Resume.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -30,8 +30,8 @@ export default function Hero() {
       console.error('Download failed:', error);
       // Fallback to simple download
       const link = document.createElement('a');
-      link.href = '/Suttanop_Chanah_Resume.pdf';
-      link.download = 'Suttanop_Chanah_Resume.pdf';
+      link.href = '/Suttanop-Chanah-Resume.pdf';
+      link.download = 'Suttanop-Chanah-Resume.pdf';
       link.click();
     } finally {
       setIsDownloading(false);
