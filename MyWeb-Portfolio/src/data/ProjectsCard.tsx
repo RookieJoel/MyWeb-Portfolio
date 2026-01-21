@@ -354,5 +354,5 @@ export const ProjCards = [
         </div>
       );
     },
-  }
+  },
 ];
