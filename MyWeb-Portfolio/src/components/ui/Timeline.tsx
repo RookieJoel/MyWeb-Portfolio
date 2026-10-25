@@ -12,37 +12,43 @@ interface TimelineEntry {
   content: React.ReactNode;
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+// Viewport offset where the line tip rides; matches the dots' sticky `top-40` (160px) plus ~half a title.
+const ROCKET_VIEWPORT_Y = "200px";
+
+export const Timeline =({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
-    if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
-      setHeight(rect.height);
-    }
+    const el = ref.current;
+    if (!el) return;
 
-  }, [ref]);
+    // Content height changes as images load and entries animate in,
+    // so keep the line/rocket travel distance in sync with it.
+    const observer = new ResizeObserver(([entry]) => {
+      setHeight(entry.target.getBoundingClientRect().height);
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
     useEffect(() => {
         Aos.init({ duration: 1000 });
       }, []);
     
+  // Track the entries list against a fixed line in the viewport, so the
+  // line's tip (and the rocket) stays level with the sticky entry dots.
   const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start 10%", "end 50%"],
+    target: ref,
+    offset: [`start ${ROCKET_VIEWPORT_Y}`, `end ${ROCKET_VIEWPORT_Y}`],
   });
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
-  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
-  const rocketOpacity = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [0, 1, 1, 0]);
+  const opacityTransform = useTransform(scrollYProgress, [0, 0.02], [0, 1]);
+  const rocketOpacity = useTransform(scrollYProgress, [0, 0.02, 0.97, 1], [0, 1, 1, 0]);
 
   return (
-    <div
-      className="w-full bg-[#010413] dark:bg-neutral-950 font-sans md:px-10"
-      ref={containerRef}
-    >
+    <div className="w-full bg-[#010413] dark:bg-neutral-950 font-sans md:px-10">
         <div className="container mx-auto px-4 py-8 text-white" data-aos="zoom-in">
             <h2 className="text-3xl font-bold mb-6 text-center text-white dark:text-neutral-200">
             Timeline <span className="text-yellow-500">of My Journey</span>

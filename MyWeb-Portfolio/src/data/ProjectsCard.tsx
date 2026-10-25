@@ -1,9 +1,48 @@
 export const ProjCards = [
   {
+    description: "LangGraph + Gemini agent for the Hugging Face Agents Course GAIA benchmark (17/20, 85%)",
+    title: "UltimateAgent",
+    src: "/projects/ultimateagent.png",
+    ctaText: "Visit",
+    ctaLink: "https://github.com/RookieJoel/UltimateAgent",
+    techList: [
+      {
+        icon: "/tech/python.svg",
+        techStack: "Python",
+      },
+      {
+        icon: "/tech/langchain.svg",
+        techStack: "LangGraph",
+      },
+      {
+        icon: "/tech/gemini.svg",
+        techStack: "Gemini",
+      },
+    ],
+    content: () => {
+      return (
+        <div>
+          <p className="mb-4">
+            UltimateAgent is a LangGraph agent on Gemini built for the Hugging Face Agents Course Unit 4 (GAIA Level 1). It scored 17/20 (85%) on the official evaluation, up from 12/20 after fixes found by analyzing LangSmith traces.
+          </p>
+          <h4 className="font-semibold mb-2">Key Features:</h4>
+          <ul className="list-disc list-inside space-y-1">
+            <li>ReAct loop with a Plan → Act → Verify system prompt and step budget</li>
+            <li>7 tools - web search, Wikipedia, URL fetch, YouTube transcripts, file reading, multimodal media analysis, Python execution</li>
+            <li>Structured-output formatter for exact-match answers</li>
+            <li>Shared rate limiter, sandboxed file access, and tool-level error handling</li>
+            <li>LangSmith tracing with per-question tags and prompt versioning</li>
+            <li>31 offline tests with faked network and model calls</li>
+          </ul>
+        </div>
+      );
+    },
+  },
+  {
     description: "A travel companion matching users with personalized itineraries",
     title : "ThamRoi",
     src : "/projects/thamroi.png",
-    ctaText : "Developing",
+    ctaText : "Visit",
     ctaLink : "https://github.com/orgs/G08SE25-Kikkaksaranungkukuk/repositories",
     techList: [
       {
@@ -43,14 +82,14 @@ export const ProjCards = [
           </p>
           <h4 className="font-semibold mb-2">Key Features:</h4>
           <ul className="list-disc list-inside space-y-1">
-            <li>🔐 User Authentication - Registration, login with JWT tokens</li>
-            <li>👤 User Profiles - Manage personal info, interests, and travel styles</li>
-            <li>🏖️ Interest-Based Matching - 17 travel interests (Sea, Mountain, Temple, Food, etc.)</li>
-            <li>✈️ Travel Style Preferences - Budget, Luxury, Backpacker, Family-friendly options</li>
-            <li>👥 Group Management - Create, join, and manage travel groups</li>
-            <li>📸 Profile & Group Images - Upload and manage profile pictures</li>
-            <li>🔍 Smart Filtering - Find groups by interests, location, and preferences</li>
-            <li>🎯 Group Operations - Join/leave groups, transfer ownership, member management</li>
+            <li>User Authentication - Registration, login with JWT tokens</li>
+            <li>User Profiles - Manage personal info, interests, and travel styles</li>
+            <li>Interest-Based Matching - 17 travel interests (Sea, Mountain, Temple, Food, etc.)</li>
+            <li>Travel Style Preferences - Budget, Luxury, Backpacker, Family-friendly options</li>
+            <li>Group Management - Create, join, and manage travel groups</li>
+            <li>Profile & Group Images - Upload and manage profile pictures</li>
+            <li>Smart Filtering - Find groups by interests, location, and preferences</li>
+            <li>Group Operations - Join/leave groups, transfer ownership, member management</li>
           </ul>
         </div>
       );
