@@ -219,8 +219,84 @@ export const timelineData = [
         </div>
       </div>
     ),
+  },
+  {
+    title: "Co-Speaker - Open the World of AI",
+    content: (
+      <div>
+        <p className="text-sm font-normal text-amber-600 md:text-xl dark:text-amber-400">
+          Co-Speaker at Mahavajiravudh Changwat Songkhla School
+        </p>
+        <p className="mb-8 text-sm font-normal text-white md:text-lg dark:text-neutral-200">
+          August 2026
+        </p>
+        <div className="mb-6">
+          <p className="text-sm font-semibold text-amber-600 md:text-lg dark:text-amber-400 mb-4">
+            "Open the World of AI: Building Projects with AI" Workshop:
+          </p>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <span className="text-amber-500 text-lg mt-0.5">•</span>
+              <span className="text-sm font-normal text-white md:text-base dark:text-neutral-200">
+                <strong>Get to Know AI</strong> - Introduced AI fundamentals to Grade 10 students in the SMTE, SMA-PM, and SMA programs
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-amber-500 text-lg mt-0.5">•</span>
+              <span className="text-sm font-normal text-white md:text-base dark:text-neutral-200">
+                <strong>Using AI to Create Innovation</strong> - Guided students in turning ideas into AI-powered projects
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-amber-500 text-lg mt-0.5">•</span>
+              <span className="text-sm font-normal text-white md:text-base dark:text-neutral-200">
+                <strong>Using AI Effectively</strong> - Taught practical techniques for getting reliable, useful results from AI tools
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-amber-500 text-lg mt-0.5">•</span>
+              <span className="text-sm font-normal text-white md:text-base dark:text-neutral-200">
+                <strong>Design Thinking Process</strong> - Walked students through empathize, define, ideate, prototype, and test to shape their projects
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div className="grid grid-cols-1 gap-4">
+          <img
+            src="/experiences/SMA-AI-3.jpeg"
+            alt="Group photo with students after the AI workshop"
+            width={1477}
+            height={1108}
+            className="h-32 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-48 lg:h-64"
+          />
+          <div className="grid grid-cols-3 gap-4">
+            <img
+              src="/experiences/SMA-AI-1.jpeg"
+              alt="Speaking with a student during the workshop"
+              width={1477}
+              height={1108}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="/experiences/SMA-AI-2.jpeg"
+              alt="Students testing their AI project"
+              width={1477}
+              height={1108}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="/experiences/SMA-AI-4.jpeg"
+              alt="School newsletter featuring the AI workshop"
+              width={1133}
+              height={1602}
+              className="h-20 w-full rounded-lg object-cover object-top shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+          </div>
+        </div>
+      </div>
+    ),
   }
-  
+
   
   
 ];

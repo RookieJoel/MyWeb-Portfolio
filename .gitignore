@@ -1,0 +1,5 @@
+# Local tooling state
+.omc/
+
+# macOS AppleDouble files (created on non-APFS drives)
+._*
