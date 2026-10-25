@@ -6,6 +6,7 @@ interface SkillsProps {
   Imgname: string;
   img: string;
   ImgclassName?: string;
+  liClassName?: string;
 }
 type SkillItemProps = {
   title: string;
@@ -24,11 +25,11 @@ export default function SkillItem({ title, skills ,Maxcols}: SkillItemProps) {
       </div>
       <div className="flex flex-row justify-center">
       <ul className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 ${Maxcols ? `lg:grid-cols-${Maxcols}` : "lg:grid-cols-5"} gap-4 mx-4 md:mx-10 lg:mx-[180px] w-fit`}>
-        {skills.map(({ id, Imgname, img, ImgclassName }) => (
+        {skills.map(({ id, Imgname, img, ImgclassName, liClassName }) => (
           <li
             key={id}
             data-aos="zoom-in"
-            className={`min-h-[10rem] list-none flex items-center justify-center`}
+            className={`min-h-[10rem] list-none flex items-center justify-center ${liClassName ?? ""}`}
           >
             <GlareCard
               className={`relative h-full w-full rounded-xl bg-white`}

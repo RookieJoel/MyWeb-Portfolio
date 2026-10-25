@@ -11,7 +11,7 @@ export const ProjCards = [
         techStack: "Python",
       },
       {
-        icon: "/tech/langchain.svg",
+        icon: "/tech/langgraph.svg",
         techStack: "LangGraph",
       },
       {

@@ -1,13 +1,17 @@
 import * as React from 'react';
 import { motion, useInView } from 'framer-motion';
  
-export function TypingEffect({ text = 'Typing Effect' }: { text: string }) {
+const DEFAULT_CLASS = 'text-xl text-center sm:text-4xl font-bold tracking-tighter md:text-6xl md:leading-[4rem]';
+
+export function TypingEffect({ text = 'Typing Effect', className = DEFAULT_CLASS, id }: { text: string; className?: string; id?: string }) {
   const ref = React.useRef(null);
   const isInView = useInView(ref);
   return (
     <h2
       ref={ref}
-      className="text-xl text-center sm:text-4xl font-bold tracking-tighter md:text-6xl md:leading-[4rem]"
+      id={id}
+      aria-label={text}
+      className={className}
     >
       {text.split('').map((letter, index) => (
         <motion.span

@@ -14,6 +14,7 @@ interface SkillsProps {
     Imgname: string;
     img:string;
 	ImgclassName?: string;
+	liClassName?: string;
 	cols?: string;
 }
 
@@ -153,6 +154,52 @@ export const skillsDevOps:SkillsProps[] = [
 		ImgclassName: "!object-contain"
 	}
 ];
+export const skillsAI:SkillsProps[] = [
+	{
+		id: 1,
+		Imgname: "LangSmith",
+		img: "tech/langsmith.svg",
+		ImgclassName: "scale-80 !object-contain"
+	},
+	{
+		id: 2,
+		Imgname: "LangChain",
+		img: "tech/langchain.svg",
+		ImgclassName: "scale-80 !object-contain"
+	},
+	{
+		id: 3,
+		Imgname: "LangGraph",
+		img: "tech/langgraph.svg",
+		ImgclassName: "scale-80 !object-contain"
+	},
+	{
+		id: 4,
+		Imgname: "PyTorch",
+		img: "tech/pytorch.svg",
+		ImgclassName: "scale-80 !object-contain"
+	},
+	{
+		id: 5,
+		Imgname: "Hugging Face",
+		img: "tech/hf.png",
+		ImgclassName: "scale-80 !object-contain"
+	},
+	{
+		id: 6,
+		Imgname: "MLflow",
+		img: "tech/mlflow.png",
+		ImgclassName: "scale-80 !object-contain"
+	},
+	{
+		id: 7,
+		Imgname: "Ollama",
+		img: "tech/ollama.png",
+		ImgclassName: "scale-80 !object-contain",
+		// centers the lone last-row item (2 cols on mobile, 3 cols from sm up)
+		liClassName: "col-span-2 sm:col-span-1 sm:col-start-2"
+	}
+];
 type SkillItemProps = {
   title: string;
   Maxcols?: number;
@@ -163,7 +210,8 @@ export const skillsSectionItems:SkillItemProps[] = [
 	{ title: "Backend", skills: skillsBackend },
 	{ title: "Frontend", skills: skillsFrontend },
 	{ title: "Database", skills: DatabaseSkills , Maxcols: 3},
-	{ title: "DevSecOps & Cloud", skills: skillsDevOps , Maxcols: 6}
+	{ title: "DevSecOps & Cloud", skills: skillsDevOps , Maxcols: 6},
+	{ title: "AI & ML", skills: skillsAI , Maxcols: 6}
 ];
 
 
