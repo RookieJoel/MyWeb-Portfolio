@@ -122,6 +122,49 @@ export const ProjCards = [
     },
   },
   {
+    description: "Vulnerable-by-design app I built as a TA for a DevSecOps workshop - students wire up 4 security gates to catch its flaws",
+    title: "DevSecOps Gauntlet",
+    src: "/projects/devsecops-workshop.png",
+    ctaText: "Visit",
+    ctaLink: "https://github.com/RookieJoel/DontEverPushThisCodeV2",
+    techList: [
+      {
+        icon: "/tech/gitaction.png",
+        techStack: "GitHub Actions",
+      },
+      {
+        icon: "/tech/trivy.png",
+        techStack: "Trivy",
+      },
+      {
+        icon: "/tech/docker.webp",
+        techStack: "Docker",
+      },
+      {
+        icon: "/tech/nextjs.png",
+        techStack: "Next.js",
+      },
+    ],
+    content: () => {
+      return (
+        <div>
+          <p className="mb-4">
+            A deliberately insecure Next.js app I built as a Teaching Assistant for the Software Engineering course (2110423). It ships with XSS, SQL injection, hardcoded secrets, and outdated dependencies, and students build a GitHub Actions security pipeline step by step until every flaw gets caught.
+          </p>
+          <h4 className="font-semibold mb-2">Key Features:</h4>
+          <ul className="list-disc list-inside space-y-1">
+            <li>Gate 0 - Secret scanning with TruffleHog (verified live credentials) and Gitleaks over full Git history</li>
+            <li>Gate 1 - Static analysis (SAST) with both SonarQube and CodeQL using extended security query suites</li>
+            <li>Gate 2 - Dependency scanning with OWASP Dependency-Check and a CVSS fail threshold</li>
+            <li>Gate 3 - Container image scanning with Trivy, filtered by severity and fix availability</li>
+            <li>Findings uploaded as SARIF to the GitHub Security tab, plus downloadable report artifacts</li>
+            <li>21 guided TODO tasks with discussion questions on trade-offs such as false positives and least-privilege permissions</li>
+          </ul>
+        </div>
+      );
+    },
+  },
+  {
     description: "A travel companion matching users with personalized itineraries",
     title : "ThamRoi",
     src : "/projects/thamroi.png",
