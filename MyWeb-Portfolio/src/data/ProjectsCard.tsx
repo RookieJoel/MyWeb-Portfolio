@@ -74,6 +74,54 @@ export const ProjCards = [
     },
   },
   {
+    description: "Teaching starter repo for a CI workshop I ran as a TA - every push passes through automated quality gates",
+    title: "Shift-Left CI Workshop Kit",
+    src: "/projects/ci-workshop.png",
+    ctaText: "Visit",
+    ctaLink: "https://github.com/RookieJoel/demo-CI-CP-Workshop",
+    techList: [
+      {
+        icon: "/tech/gitaction.png",
+        techStack: "GitHub Actions",
+      },
+      {
+        icon: "/tech/go.png",
+        techStack: "Go",
+      },
+      {
+        icon: "/tech/fiber.png",
+        techStack: "Fiber",
+      },
+      {
+        icon: "/tech/nextjs.png",
+        techStack: "Next.js",
+      },
+      {
+        icon: "/tech/docker.webp",
+        techStack: "Docker",
+      },
+    ],
+    content: () => {
+      return (
+        <div>
+          <p className="mb-4">
+            A full-stack starter template (Go Fiber backend + Next.js frontend) I built as a Teaching Assistant to show students how a real CI pipeline catches problems before code is merged. Each pull request runs through formatting, linting, security scanning, and coverage checks in GitHub Actions.
+          </p>
+          <h4 className="font-semibold mb-2">Key Features:</h4>
+          <ul className="list-disc list-inside space-y-1">
+            <li>Modular CI built from reusable workflows - pre-check, frontend and backend quality gates, and test suites</li>
+            <li>Auto-formatting with gofmt and Prettier, with the bot committing fixes back to the branch</li>
+            <li>PR titles checked against Conventional Commits with commitlint</li>
+            <li>Backend gates - go vet, staticcheck, and govulncheck vulnerability scanning</li>
+            <li>Frontend gates - ESLint, JSDoc coverage, jscpd duplicate-code detection, and production dependency audit</li>
+            <li>80% test coverage thresholds enforced for both Go and Jest tests</li>
+            <li>Testable backend design with dependency-injected services and mocks; pre-commit hooks and Docker Compose for local setup</li>
+          </ul>
+        </div>
+      );
+    },
+  },
+  {
     description: "A travel companion matching users with personalized itineraries",
     title : "ThamRoi",
     src : "/projects/thamroi.png",
