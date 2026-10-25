@@ -127,6 +127,67 @@ export const timelineData = [
     ),
   },
   {
+    title: "Research Assistant – CBME-iPDM (Wannoi)",
+    content: (
+      <div>
+        <p className="text-sm font-normal text-amber-600 md:text-xl dark:text-amber-400">
+          Research Assistant & Software Developer – Wannoi, Precision Diabetes Management Platform
+        </p>
+        <p className="mb-8 text-sm font-normal text-white md:text-lg dark:text-neutral-200">
+          December 2025 – Present
+        </p>
+        <div className="mb-6">
+          <p className="text-sm font-semibold text-amber-600 md:text-lg dark:text-amber-400 mb-4">
+            Key Contributions:
+          </p>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <span className="text-amber-500 text-lg mt-0.5">•</span>
+              <span className="text-sm font-normal text-white md:text-base dark:text-neutral-200">
+                <strong>Production Reliability</strong> - Resolved critical production bugs across the Go backend and Next.js frontend
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-amber-500 text-lg mt-0.5">•</span>
+              <span className="text-sm font-normal text-white md:text-base dark:text-neutral-200">
+                <strong>Secure CI/CD</strong> - Hardened the pipeline with automated security gates, improving deployment safety for a 4-hospital collaboration
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-amber-500 text-lg mt-0.5">•</span>
+              <span className="text-sm font-normal text-white md:text-base dark:text-neutral-200">
+                <strong>Clinical UX</strong> - Enhanced patient management dashboards and improved lab data entry accuracy, reducing friction for clinical staff in daily operations
+              </span>
+            </li>
+          </ul>
+        </div>
+        <a
+          href="https://wannoi.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+          aria-label="Visit wannoi.org"
+        >
+          <img
+            src="/experiences/wannoi.png"
+            alt="Wannoi patient dashboard on desktop, laptop, and mobile"
+            width={1630}
+            height={1310}
+            className="w-full h-auto rounded-lg bg-white transition-transform duration-300 hover:scale-[1.02] shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+        </a>
+        <a
+          href="https://wannoi.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-block text-sm font-semibold text-amber-500 hover:text-amber-300 md:text-base"
+        >
+          Visit wannoi.org →
+        </a>
+      </div>
+    ),
+  },
+  {
     title: "Software Engineer – Information System Development",
     content: (
       <div>
