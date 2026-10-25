@@ -39,6 +39,41 @@ export const ProjCards = [
     },
   },
   {
+    description: "Multi-AZ WordPress stack on AWS provisioned end to end with modular Terraform",
+    title: "WordPress on AWS as Code",
+    src: "/projects/aws-wordpress.png",
+    ctaText: "Visit",
+    ctaLink: "https://github.com/RookieJoel/Cloud-term-proj",
+    techList: [
+      {
+        icon: "/tech/terraform.png",
+        techStack: "Terraform",
+      },
+      {
+        icon: "/tech/aws.png",
+        techStack: "AWS",
+      },
+    ],
+    content: () => {
+      return (
+        <div>
+          <p className="mb-4">
+            A fully automated WordPress deployment on AWS, written as Infrastructure as Code with Terraform (OpenTofu). One apply builds the network, database, storage, and server; one destroy tears it all down.
+          </p>
+          <h4 className="font-semibold mb-2">Key Features:</h4>
+          <ul className="list-disc list-inside space-y-1">
+            <li>5 reusable Terraform modules - VPC, security, database, storage, and compute</li>
+            <li>Custom VPC with a public subnet and private subnets across 2 Availability Zones</li>
+            <li>EC2 web server (Apache + PHP 8.3) with an Elastic IP, configured automatically by a user-data script</li>
+            <li>RDS MariaDB kept in private subnets, reachable only from the WordPress security group</li>
+            <li>S3 media offloading through an IAM instance profile with scoped bucket access</li>
+            <li>Defense in depth with NACLs and security groups; secrets kept out of Git in a separate tfvars file</li>
+          </ul>
+        </div>
+      );
+    },
+  },
+  {
     description: "A travel companion matching users with personalized itineraries",
     title : "ThamRoi",
     src : "/projects/thamroi.png",
