@@ -14,7 +14,9 @@ export const contactEmail = import.meta.env.VITE_MY_EMAIL;
 // Social links from environment  
 export const socialLinks = {
   github: import.meta.env.VITE_GITHUB_URL,
-  linkedin: import.meta.env.VITE_LINKEDIN_URL,
+  linkedin:
+    import.meta.env.VITE_LINKEDIN_URL ||
+    "https://www.linkedin.com/in/suttanop-chanah-5084a0319/",
 };
 
 // Example template variables that should be configured in your EmailJS template:

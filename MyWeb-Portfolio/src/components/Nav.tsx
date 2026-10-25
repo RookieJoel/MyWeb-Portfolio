@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiGithub, FiMail, FiMenu, FiX } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiMenu, FiX } from "react-icons/fi";
 import { navItems } from "../data/index";
 import { useState } from "react";
 import { socialLinks } from "../config/emailjs";
@@ -136,6 +136,24 @@ export default function Nav() {
             <FiGithub className="text-2xl hover:text-yellow-400 transition-colors duration-300" />
           </motion.a>
 
+          <motion.a
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 20,
+              delay: 0.5,
+            }}
+            whileHover={{ scale: 1.2 }}
+            href={socialLinks.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <FiLinkedin className="text-2xl hover:text-yellow-400 transition-colors duration-300" />
+          </motion.a>
+
           <motion.button
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -211,7 +229,17 @@ export default function Nav() {
               <FiGithub className="text-2xl hover:text-yellow-400 transition-colors duration-300" />
             </motion.a>
 
-            <motion.button 
+            <motion.a
+              whileHover={{ scale: 1.2 }}
+              href={socialLinks.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FiLinkedin className="text-2xl hover:text-yellow-400 transition-colors duration-300" />
+            </motion.a>
+
+            <motion.button
               whileHover={{ scale: 1.2 }} 
               onClick={(e) => scrollToSection('#contact', e)}
               className="cursor-pointer bg-transparent border-none p-0"
