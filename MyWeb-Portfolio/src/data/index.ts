@@ -132,6 +132,24 @@ export const skillsDevOps:SkillsProps[] = [
 			id: 6,
 			Imgname: "AWS",
 			img: "tech/aws.png",
+	},
+	{
+		id: 7,
+		Imgname: "Terraform",
+		img: "tech/terraform.png",
+		ImgclassName: "scale-80 !object-contain"
+	},
+	{
+		id: 8,
+		Imgname: "Snyk",
+		img: "tech/snyk.png",
+		ImgclassName: "!object-contain"
+	},
+	{
+		id: 9,
+		Imgname: "Trivy",
+		img: "tech/trivy.png",
+		ImgclassName: "!object-contain"
 	}
 ];
 type SkillItemProps = {
@@ -144,7 +162,7 @@ export const skillsSectionItems:SkillItemProps[] = [
 	{ title: "Backend", skills: skillsBackend },
 	{ title: "Frontend", skills: skillsFrontend },
 	{ title: "Database", skills: DatabaseSkills , Maxcols: 3},
-	{ title: "DevOps & Cloud", skills: skillsDevOps , Maxcols: 6}
+	{ title: "DevSecOps & Cloud", skills: skillsDevOps , Maxcols: 6}
 ];
 
 

@@ -1,6 +1,132 @@
 // Timeline data with JSX content for the portfolio website
 export const timelineData = [
   {
+    title: "Cloud Engineer Intern – AIS",
+    content: (
+      <div>
+        <p className="text-sm font-normal text-amber-600 md:text-xl dark:text-amber-400">
+          Intern, Cloud Governance and Analytics Team – Advanced Info Service (AIS)
+        </p>
+        <p className="mb-8 text-sm font-normal text-white md:text-lg dark:text-neutral-200">
+          2026 · 9-week internship
+        </p>
+        <div className="mb-6">
+          <p className="text-sm font-semibold text-amber-600 md:text-lg dark:text-amber-400 mb-4">
+            SecOps – Vulnerability Remediation Workflow:
+          </p>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <span className="text-amber-500 text-lg mt-0.5">•</span>
+              <span className="text-sm font-normal text-white md:text-base dark:text-neutral-200">
+                <strong>Cloud Infrastructure</strong> - Designed the cloud architecture and provisioned the environment with Terraform
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-amber-500 text-lg mt-0.5">•</span>
+              <span className="text-sm font-normal text-white md:text-base dark:text-neutral-200">
+                <strong>Risk Analysis</strong> - Ingested security findings with Python for vulnerability analysis and risk-level classification, turning them into prioritized, actionable fixes
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-amber-500 text-lg mt-0.5">•</span>
+              <span className="text-sm font-normal text-white md:text-base dark:text-neutral-200">
+                <strong>Zero-Downtime Remediation</strong> - Found several vulnerabilities fixable by a single patch; checked affected modules and disabled unused components before patching
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-amber-500 text-lg mt-0.5">•</span>
+              <span className="text-sm font-normal text-white md:text-base dark:text-neutral-200">
+                <strong>Change Management</strong> - Prepared deployment documentation and followed the change-management process before rollout
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div className="mb-6">
+          <p className="text-sm font-semibold text-amber-600 md:text-lg dark:text-amber-400 mb-4">
+            FinOps – Cloud Cost Insights:
+          </p>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <span className="text-amber-500 text-lg mt-0.5">•</span>
+              <span className="text-sm font-normal text-white md:text-base dark:text-neutral-200">
+                <strong>Anomaly Detection</strong> - Built baseline models to separate unusual cost changes from normal spending patterns
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-amber-500 text-lg mt-0.5">•</span>
+              <span className="text-sm font-normal text-white md:text-base dark:text-neutral-200">
+                <strong>Root-Cause Analysis</strong> - Investigated the accounts and services driving cost anomalies
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-amber-500 text-lg mt-0.5">•</span>
+              <span className="text-sm font-normal text-white md:text-base dark:text-neutral-200">
+                <strong>Top-Down Dashboard</strong> - Delivered a dashboard drilling from the overall cloud portfolio down to account and service level
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div className="mb-6">
+          <p className="text-sm font-semibold text-amber-600 md:text-lg dark:text-amber-400 mb-4">
+            Beyond the Deliverables:
+          </p>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <span className="text-amber-500 text-lg mt-0.5">•</span>
+              <span className="text-sm font-normal text-white md:text-base dark:text-neutral-200">
+                <strong>Design Thinking</strong> - Learned to understand the problem before jumping to a solution
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-amber-500 text-lg mt-0.5">•</span>
+              <span className="text-sm font-normal text-white md:text-base dark:text-neutral-200">
+                <strong>Pitching & Presenting</strong> - Communicated why a solution matters through presentations and mentor feedback
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-amber-500 text-lg mt-0.5">•</span>
+              <span className="text-sm font-normal text-white md:text-base dark:text-neutral-200">
+                <strong>Cross-Team Collaboration</strong> - Exchanged perspectives with interns from other teams
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div className="grid grid-cols-1 gap-4">
+          <img
+            src="/experiences/AIS-4.jpeg"
+            alt="With the Cloud Governance and Analytics team"
+            width={1877}
+            height={1408}
+            className="h-32 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-48 lg:h-64"
+          />
+          <div className="grid grid-cols-3 gap-4">
+            <img
+              src="/experiences/AIS-1.jpeg"
+              alt="Pitching a project to the AIS panel"
+              width={2048}
+              height={946}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="/experiences/AIS-2.jpeg"
+              alt="Design thinking board with persona and sticky notes"
+              width={1152}
+              height={1536}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="/experiences/AIS-3.jpeg"
+              alt="Fellow AIS interns after a design thinking session"
+              width={1473}
+              height={1110}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
     title: "Software Engineer – Information System Development",
     content: (
       <div>
@@ -264,7 +390,7 @@ export const timelineData = [
         <div className="grid grid-cols-1 gap-4">
           <img
             src="/experiences/SMA-AI-3.jpeg"
-            alt="Group photo with students after the AI workshop"
+            alt="Students and speakers after the AI workshop"
             width={1477}
             height={1108}
             className="h-32 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-48 lg:h-64"
