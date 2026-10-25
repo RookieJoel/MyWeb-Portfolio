@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { About } from "./components/About";
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
+import { Certifications } from "./components/Certifications";
 import Contact from "./components/Contact";
 import { ResumeQuickAccess } from "./components/ui/ResumeQuickAccess";
 
@@ -27,6 +28,7 @@ export default function App() {
       <Journey />
       <Skills />
       <Projects />
+      <Certifications />
       <About />
       <Contact />
       
